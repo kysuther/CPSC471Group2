@@ -7,4 +7,4 @@ Andrew Dong - T05
 TA: Ibrahim Karakira
 
 #Website Information
-Our website is hosted on a DigitalOcean Droplet and can be found at 104.236.176.205
+Our website is hosted on a DigitalOcean Droplet and can be found at 104.236.171.58
