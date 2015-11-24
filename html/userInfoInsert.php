@@ -1,6 +1,6 @@
 <?php
 	echo "<h1>Hello World</h1>";
-	$link = mysqli_connect("localhost", "root", "","CPSC471_musicdatabase");
+	$link = mysqli_connect("localhost", "root", "jhong","CPSC471_MusicDatabase");
 	
 	if($link === false)
 	{
