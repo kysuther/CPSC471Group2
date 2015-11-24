@@ -14,7 +14,7 @@
 	$song_length = mysqli_real_escape_string($link,$_POST['songlength']);
 	$genre = mysqli_real_escape_string($link,$_POST['Genre']);
 	
-	$sql = "INSERT INTO artists (name,webpage)
+	$sql = "INSERT IGNORE INTO artists (name,webpage)
 	VALUES('$Artist_name', '$ArtistWebpage')";
 	if(mysqli_query($link, $sql))
 	{
