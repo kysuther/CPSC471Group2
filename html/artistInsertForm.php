@@ -5,7 +5,7 @@
 <title>Add Records Form</title>
 </head>
 <body>
-<form action="userInfoInsert.php" method="post">
+<form action="JOSHFORM.php" method="post">
 	<p>
     	<label for="artistName">Artist Name:</label>
         <input type="text" name="artistName" id="artistName">
