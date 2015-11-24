@@ -30,6 +30,11 @@
         <input type="text" name="Genre" id="Genre">
     </p>
 	
+	<p>
+    	<label for="albumName">Album Name:</label>
+        <input type="text" name="albumName" id="albumName">
+    </p>
+	
 	
 	
 	
