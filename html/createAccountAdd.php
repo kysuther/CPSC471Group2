@@ -12,7 +12,6 @@
 	$email_address = mysqli_real_escape_string($link, $_POST['email']);
 	$user_password = mysqli_real_escape_string($link,$_POST['password']);
 	$user_passwdHash = password_hash($user_password, PASSWORD_DEFAULT);
-	echo $user_passwdHash;
 
 	$sql = "INSERT INTO user (Fname,Lname,email,password)
 	VALUES('$first_name', '$last_name', '$email_address','$user_passwdHash')";
