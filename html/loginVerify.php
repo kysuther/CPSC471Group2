@@ -16,9 +16,8 @@
 		$emailAddr = $row['email'];
 		$password_hash = $row['password'];
 	}
-	$passhash = '$2y$10$nYntHK2pTX6hmjsXAxggC.qlT9lE34juxQuAIPrZoxSvgi5vbLmG6';
-	$passRes = password_verify($user_password, $passhash);
-	if($passRes == true){
+	$passRes = password_verify($user_password, $password_hash);
+	if($passRes == true && $email_address == $emailAddr){
 		echo "Login Successful!";
 	}else
 		echo "Login Failed!";
