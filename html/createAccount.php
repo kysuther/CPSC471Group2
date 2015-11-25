@@ -5,7 +5,7 @@
 <title>Add Records Form</title>
 </head>
 <body>
-<form action="userInfoInsert.php" method="post">
+<form action="createAccountAdd.php" method="post">
 	<p>
     	<label for="firstName">First Name:</label>
         <input type="text" name="firstname" id="firstName">
@@ -18,13 +18,13 @@
     	<label for="emailAddress">Email Address:</label>
         <input type="text" name="email" id="emailAddress">
     </p>
-	
+
 	<p>
     	<label for="password">Password:</label>
         <input type="text" name="password" id="password">
     </p>
-	
-	
+
+
     <input type="submit" value="REGISTER">
 </form>
 </body>
