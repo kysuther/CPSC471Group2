@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Add Records Form</title>
-</head>
-<body>
-<form action="createAccountAdd.php" method="post">
+<?php include("header.php") ?>
+
+<form style="z-index:9999999" action="createAccountAdd.php" method="post">
+<br/>
+<br/>
+<br/>
+
+<div >
 	<p>
     	<label for="firstName">First Name:</label>
         <input type="text" name="firstname" id="firstName">
@@ -26,6 +26,7 @@
 
 
     <input type="submit" value="REGISTER">
+    </div>
 </form>
-</body>
-</html>
+
+<?php include("footer.php") ?>

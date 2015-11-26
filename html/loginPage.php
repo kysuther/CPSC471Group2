@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Log In Page</title>
-</head>
-<body>
+<?php include("header.php") ?>
+
 <form action="loginVerify.php" method="post">
     <p>
     	<label for="emailAddress">Email Address:</label>

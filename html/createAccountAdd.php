@@ -1,11 +1,5 @@
 <?php
-	echo "<h1>Hello World</h1>";
-	$link = mysqli_connect("localhost", "root", "jhong","CPSC471_MusicDatabase");
-
-	if($link === false)
-	{
-		die("ERROR: could not connect. " . mysqli_connect_error());
-	}
+include("headerphp.php");
 
 	$first_name = mysqli_real_escape_string($link, $_POST['firstname']);
 	$last_name = mysqli_real_escape_string($link, $_POST['lastname']);
@@ -23,7 +17,5 @@
 	{
 		echo "ERROR: Could not execute $sql." . mysqli_error($link);
 	}
-
-
-	mysqli_close($link);
+include("footerphp.php");
 ?>

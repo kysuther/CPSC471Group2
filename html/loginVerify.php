@@ -1,12 +1,5 @@
 <?php
-	echo "<h1>Hello World</h1>";
-	$link = mysqli_connect("localhost", "root", "jhong","CPSC471_MusicDatabase");
-
-	if($link === false)
-	{
-		die("ERROR: could not connect. " . mysqli_connect_error());
-	}
-
+	include("headerphp.php") ;
 	$email_address = mysqli_real_escape_string($link,$_POST['email']);
 	$user_password = mysqli_real_escape_string($link,$_POST['password']);
 
@@ -22,5 +15,5 @@
 	}else
 		echo "Login Failed!";
 
-	mysqli_close($link);
+	include("footerphp.php");
 ?>
