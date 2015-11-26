@@ -1,5 +1,8 @@
 <?php include("header.php") ?>
 
+<br />
+<br />
+<br />
 <form action="loginVerify.php" method="post">
     <p>
     	<label for="emailAddress">Email Address:</label>
@@ -16,3 +19,4 @@
 </form>
 </body>
 </html>
+<?php include("footer.php") ?>

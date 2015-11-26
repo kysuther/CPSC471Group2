@@ -12,8 +12,10 @@
 	$passRes = password_verify($user_password, $password_hash);
 	if($passRes == true && $email_address == $emailAddr){
 		echo "Login Successful!";
-	}else
+		$_SESSION['emailAddress'] = $emailAddr;
+	}else{
 		echo "Login Failed!";
+	}
 
 	include("footerphp.php");
 ?>
