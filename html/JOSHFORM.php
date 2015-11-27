@@ -1,6 +1,8 @@
 <?php
-	echo "<h1>Hello World</h1>";
-	$link = mysqli_connect("localhost", "root", "jhong","CPSC471_MusicDatabase");
+	include("header.php");
+	echo '<br />';
+	echo '<br />';
+	echo '<br />';
 
 	if($link === false)
 	{
@@ -33,5 +35,5 @@
 	}
 
 
-	mysqli_close($link);
+	include("footer.php");
 ?>

@@ -1,5 +1,8 @@
 <?php
-include("headerphp.php");
+	include("header.php");
+	echo '<br />';
+	echo '<br />';
+	echo '<br />';
 
 	$first_name = mysqli_real_escape_string($link, $_POST['firstname']);
 	$last_name = mysqli_real_escape_string($link, $_POST['lastname']);
@@ -11,11 +14,14 @@ include("headerphp.php");
 	VALUES('$first_name', '$last_name', '$email_address','$user_passwdHash')";
 	if(mysqli_query($link, $sql))
 	{
-		echo "Insert was sucessful!";
+		echo "<p>Account Created Successfully!</p>";
+		echo "<p>Redirecting to homepage </p>";
+		echo '<meta http-equiv="Refresh" content="2; url=../">';
+
 	}
 	else
 	{
 		echo "ERROR: Could not execute $sql." . mysqli_error($link);
 	}
-include("footerphp.php");
+include("footer.php");
 ?>
