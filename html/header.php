@@ -184,8 +184,15 @@ body{
 <div id="title"><a href="/"><b>CPSC471 Group02</b></a></div>
 <div id="subtitle">Fall 2015 | University of Calgary</div>
     <div id="userlinks">
-	<a href="/loginPage.php"><b>log in</b></a>
-	<a href="/createAccount.php"><b>sign up</b></a>
+    	<?php
+    		if(isset($_SESSION['emailAddress'])){
+    			echo '<a href="/logout.php"><b>Log Out</b></a>';
+    			echo 'signed in as: '.$_SESSION['emailAddress'];
+    		}else{
+			echo '<a href="/loginPage.php"><b>log in</b></a>';
+			echo '<a href="/createAccount.php"><b>sign up</b></a>';
+		}
+	?>
 </div>
 </div>
 
