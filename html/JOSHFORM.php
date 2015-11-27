@@ -16,6 +16,14 @@
 	$song_length = mysqli_real_escape_string($link,$_POST['songlength']);
 	$genre = mysqli_real_escape_string($link,$_POST['Genre']);
 
+	
+	if($sql = "SELECT * FROM `artists` WHERE `name` = '$Artist_name'";)
+	{
+		// If the artist name is the same then we want to find the matching artistID in Song
+	}
+	
+	
+	
 	$sql = "INSERT IGNORE INTO artists (name,webpage)
 	VALUES('$Artist_name', '$ArtistWebpage')";
 	if(mysqli_query($link, $sql))
