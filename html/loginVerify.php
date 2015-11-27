@@ -19,6 +19,7 @@
 	}else{
 		echo "Login Failed!";
 	}echo "<p>Redirecting to homepage </p>";
+	echo '<meta http-equiv="Refresh" content="2; url=index.php">';
 
 	include("footer.php");
 ?>
