@@ -1,6 +1,9 @@
 <?php
-	include 'headerphp.php';
+	include 'header.php';
 	session_destroy();
-	echo 'You have been logged out!';
-	include 'footerphp.php';
+	echo '<br />';
+	echo '<br />';
+	echo '<br />';
+	echo 'Logging out, you will be redirected to the home page.';
+	include 'footer.php';
 ?>

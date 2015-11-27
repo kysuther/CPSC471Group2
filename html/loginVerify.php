@@ -1,5 +1,8 @@
 <?php
-	include("headerphp.php") ;
+	include("header.php") ;
+	echo '<br />';
+	echo '<br />';
+	echo '<br />';
 	$email_address = mysqli_real_escape_string($link,$_POST['email']);
 	$user_password = mysqli_real_escape_string($link,$_POST['password']);
 
@@ -15,7 +18,7 @@
 		$_SESSION['emailAddress'] = $emailAddr;
 	}else{
 		echo "Login Failed!";
-	}
+	}echo "<p>Redirecting to homepage </p>";
 
-	include("footerphp.php");
+	include("footer.php");
 ?>

@@ -186,8 +186,9 @@ body{
     <div id="userlinks">
     	<?php
     		if(isset($_SESSION['emailAddress'])){
+    			echo '<a href="/"><b>My Music</b></a>';
+    			echo '<a href="/"><b>Account: '.$_SESSION['emailAddress'].'</b></a>';
     			echo '<a href="/logout.php"><b>Log Out</b></a>';
-    			echo 'signed in as: '.$_SESSION['emailAddress'];
     		}else{
 			echo '<a href="/loginPage.php"><b>log in</b></a>';
 			echo '<a href="/createAccount.php"><b>sign up</b></a>';
