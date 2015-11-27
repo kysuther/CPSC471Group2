@@ -16,6 +16,7 @@
 	if($passRes == true && $email_address == $emailAddr){
 		echo "Login Successful!";
 		$_SESSION['emailAddress'] = $emailAddr;
+		$_SESSION['accessLevel'] = 'User';
 	}else{
 		echo "Login Failed!";
 	}echo "<p>Redirecting to homepage </p>";
