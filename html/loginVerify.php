@@ -15,8 +15,10 @@
 	$passRes = password_verify($user_password, $password_hash);
 	if($passRes == true && $email_address == $emailAddr){
 		echo "Login Successful!";
+		session_regenerate_id(true);
 		$_SESSION['emailAddress'] = $emailAddr;
 		$_SESSION['accessLevel'] = 'User';
+		$_SESSION['lastSESSIDUpdate'] = time();
 	}else{
 		echo "Login Failed!";
 	}echo "<p>Redirecting to homepage </p>";

@@ -4,7 +4,7 @@
 	//Prevents session fixation by regenerating an ID for new sessions
 	//and generating a new session ID for sessions lasting over 30 minutes
 	if (!isset($_SESSION['initiated'])){
-		session_regenerate_id();
+		session_regenerate_id(true);
 		$_SESSION['initiated'] = true;
 		$_SESSION['accessLevel'] = 'Guest';
 		$_SESSION['lastSESSIDUpdate'] = time();
