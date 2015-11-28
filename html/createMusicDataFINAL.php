@@ -157,13 +157,6 @@
 		echo "ERROR: not able to execute $sql".mysqli_error($link);
 	}
 
-
-
-
-
-
-
-
 	include 'footer.php';
 
 
