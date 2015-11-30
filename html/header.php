@@ -148,17 +148,19 @@ body{
     background: transparent;
     top:100px;
     margin-left:240px;
+    min-height:100%;
 }
 #thefooter {
-    position:relative;
+    position:fixed;
+    bottom:0;
     width:100%;
-    height:200px;
-    margin-top:900px;
+    height:100px;
+    margin-top:90px;
     background:#2d2d2c;
     color:#ffffff;
 }
 #footertitle {
-    padding-top:55px;
+    padding-top:15px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align:center;
     color:#ffffff;
