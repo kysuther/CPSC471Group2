@@ -3,18 +3,11 @@ echo "<br/>";
 echo "<br/>";
 echo "<br/>";
 
-    $link = mysqli_connect("localhost", "root", "jhong", "CPSC471_MusicDatabase");
-
-    if($link === false)
-    {
-           die("ERROR: could not connect. " . mysqli_connect_error());
-    }
-    
     $song = "SELECT *
             FROM song";
     $artist = "SELECT *
             FROM artists";
-                
+
     if(($sresult = mysqli_query($link, $song)) && ($aresult = mysqli_query($link, $artist)))
     {
         if((mysqli_num_rows($sresult) > 0) && (mysqli_num_rows($aresult) > 0))
@@ -32,7 +25,7 @@ echo "<br/>";
 				echo "</tr>";
             }
             echo "</table>";
-            
+
             mysqli_free_result($sresult);
             mysqli_free_result($aresult);
         }
@@ -40,15 +33,11 @@ echo "<br/>";
         {
             echo "No songs in the database yet";
         }
-        
+
     }
     else
     {
         echo "ERROR: Could not execute $sql." . mysqli_error($link);
     }
-
-    mysqli_close($link);
-
-
 (include "footer.php");
 ?>
