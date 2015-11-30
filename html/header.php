@@ -192,6 +192,7 @@ body{
     				echo '<a href="/"><b>Admin</b></a>';
     			echo '<a href="/logout.php"><b>Log Out</b></a>';
     		}else{
+            echo '<a href="/music.php"><b>browse</b></a>';
 			echo '<a href="/loginPage.php"><b>log in</b></a>';
 			echo '<a href="/createAccount.php"><b>sign up</b></a>';
 		}
