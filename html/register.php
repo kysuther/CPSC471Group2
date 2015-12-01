@@ -7,6 +7,10 @@
 </head>
 <body>
 
+<div id="topimage">
+    <img src="http://i68.tinypic.com/244o8sk.png">
+</div>
+
 <form action="createAccountAdd.php" method="post">
 	<p>
     	<label for="firstName">First Name:</label>
