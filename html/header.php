@@ -100,6 +100,15 @@ body{
     background:#fff;
     border:1px solid #525252;
 }
+#imgcontainer {
+  width: 100%;
+  margin: auto;
+}
+.imgsection {
+  margin-bottom: 35px;
+  margin-left:0px;
+  margin-top:0px;
+}
 #topimage {
     position:relative;
     z-index:9999;
