@@ -10,7 +10,10 @@ echo "<br/>";
     {
            die("ERROR: could not connect. " . mysqli_connect_error());
     }
-    
+    // if($userID === null)
+    // {
+        // die("ERROR: not a set user")
+    // }
     $playlist = "SELECT *
                 FROM playlist";
                 #WHERE uid = userID";
@@ -40,7 +43,10 @@ echo "<br/>";
         echo "ERROR: Could not execute $sql." . mysqli_error($link);
     }
     
-    echo <INPUT TYPE = "Text" VALUE = "add to playlist" NAME = "somehting?">;
+    echo "<br/>";
+    echo "<br/>";
+    echo "<br/>";
+    echo '<a href="newPlaylist.php">New Playlist</a>';
     
     mysqli_close($link);
 

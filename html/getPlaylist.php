@@ -26,9 +26,7 @@
             
     echo "done selecting";
     
-    // if(($qwerty = mysqli_query($link, $test)) && ($qwertyu = mysqli_query($link, $ntest)))
     if(($newResult = mysqli_query($link, $playlist)) && ($nResult = mysqli_query($link, $songs)))
-    // if($newResult = mysqli_query($link, $test))
     {
         echo "first test is good";
             echo "<table>";
@@ -50,7 +48,10 @@
     {
         echo "first if fail";
     }
-    
+    echo "<br/>";
+    echo "<br/>";
+    echo "<br/>";
+    echo '<a href="editPlaylist.php?link=' . $playlist_name . '">Edit Playlist</a>';
 
 
     include("footer.php");

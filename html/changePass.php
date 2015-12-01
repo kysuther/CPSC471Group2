@@ -14,7 +14,6 @@
 			while($row = mysqli_fetch_array($result)){
 				$password_hash = $row['password'];
 			}
-			echo $password_hash;
 			$passRes = password_verify($currPass, $password_hash);
 			if($passRes){
 				$newPassHash = password_hash($newPass, PASSWORD_DEFAULT);
