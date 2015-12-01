@@ -15,56 +15,36 @@
     #$playlist_name = the name of playlist clicked on in playlists.php
     $playlist_name = $_GET['link'];
     
-    #select said playlist
+    #select said playlist            
     $playlist = "SELECT *
-                FROM playlist
-                WHERE name = '$playlist_name'";
+                FROM contain
+                WHERE Pname='$playlist_name'";
                 
-    #get songs from said playlist
+    #get songs from said playlist            
     $songs = "SELECT *
-            FROM song
-            WHERE trackID IN
-            (SELECT *
-            FROM $playlist
-            WHERE TID=trackID)";
+                    FROM (song JOIN contain)";
             
-     $artists = "SELECT *
-                    FROM artists
-                    WHERE EXISTS
-                    (SELECT *
-                    FROM $songs
-                    WHERE ArtistID = AID)";
     echo "done selecting";
     
-    if($newResult = mysqli_query($link, $playlist))
+    // if(($qwerty = mysqli_query($link, $test)) && ($qwertyu = mysqli_query($link, $ntest)))
+    if(($newResult = mysqli_query($link, $playlist)) && ($nResult = mysqli_query($link, $songs)))
+    // if($newResult = mysqli_query($link, $test))
     {
-        echo "got playlist";
-        if($nResult = mysqli_query($link, $songs))
-        {
-            echo "first if";
-            if(mysqli_num_rows($newResult) > 0)
+        echo "first test is good";
+            echo "<table>";
+                echo "<tr>";
+                    echo'<th style="font-size:200%">Track</th>';
+                    // echo'<th style="font-size:200%">Artist</th>';
+                echo"</tr>";
+            while(($test = mysqli_fetch_array($newResult)) && ($test1 = mysqli_fetch_array($nResult)))
             {
-                echo "second if";
-                echo "<table>";
-                    echo "<tr>";
-                        echo'<th style="font-size:200%">Track</th>';
-                        echo'<th style="font-size:200%">Artist</th>';
-                    echo"</tr>";
-                while($newRow = mysqli_fetch_array($newResult))
-                {
-                    echo "<tr>";
-                        echo '<td style="text-align:center;">' . $newRow['name']. "</td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-                
-                mysqli_free_result($newResult);
+                echo "<tr>";
+                    echo '<td style="text-align:center;">' . $test1['name']. "</td>";
+                echo "</tr>";
             }
-            else
-            {
-                echo "second if fail";
-            }
-        }
+            echo "</table>";
+            
+            mysqli_free_result($newResult);
     }
     else
     {
