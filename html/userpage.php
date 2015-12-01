@@ -58,7 +58,7 @@ text-align: center;
 </style>
 
 <div id="userimage">
-  <img src="http://i63.tinypic.com/3128kr4.jpg">
+  <img src="http://i68.tinypic.com/16m4oia.png">
 <div id="container">
  
 <!-- START FIRST SECTION -->
