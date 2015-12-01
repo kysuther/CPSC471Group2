@@ -105,7 +105,7 @@ body{
     z-index:9999;
     height:600px;
     left:0px;
-    top:50px;
+    top:20px;
 }
 #topimage img{
     max-height:600px;
@@ -174,11 +174,6 @@ body{
     color:#ffffff;
     letter-spacing:1px;
     font-size:14px;
-}
-#footernote a {
-    text-transform:none;
-    text-decoration:none;
-    color:#fff;
 }
 </style>
 <body>
