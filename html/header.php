@@ -105,9 +105,10 @@ body{
     z-index:9999;
     height:600px;
     left:0px;
-    top:20px;
+    top:0px;
 }
 #topimage img{
+    margin:auto;
     max-height:600px;
     max-width:100%;
 }
@@ -141,13 +142,14 @@ body{
 }
 .container {
     width: 900px;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+}
+.section {
+     padding: 10px;
     text-align: center;
     position: relative;
     background: transparent;
     top:100px;
-    margin-left:240px;
     min-height:100%;
 }
 #thefooter {
