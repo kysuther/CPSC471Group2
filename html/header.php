@@ -117,6 +117,8 @@ body{
     position: relative;
     margin: 0px auto;
     padding-top: 20px;
+    padding-left:20px;
+    padding-right:20px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size:20px;
     color: #525252;
