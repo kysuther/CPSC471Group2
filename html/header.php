@@ -100,15 +100,6 @@ body{
     background:#fff;
     border:1px solid #525252;
 }
-#imgcontainer {
-  width: 100%;
-  margin: auto;
-}
-.imgsection {
-  margin-bottom: 35px;
-  margin-left:0px;
-  margin-top:0px;
-}
 #topimage {
     position:relative;
     z-index:9999;
@@ -118,9 +109,10 @@ body{
     width:100%;
 }
 #topimage img{
+    position:absolute;
+    left:0;
+    right:0;
     margin:auto;
-    max-height:600px;
-    max-width:100%;
 }
 .item {
     position: relative;
