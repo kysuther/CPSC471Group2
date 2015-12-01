@@ -63,7 +63,7 @@
 		else
 		{
 			echo nl2br ("No matching artists for '$search_field'\n");
-			echo nl2br ("  ");
+			echo "<br/>"
 		}
 		
 	}
