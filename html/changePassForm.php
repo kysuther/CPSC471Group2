@@ -5,11 +5,6 @@
 <br/>
 
 <div >
-    <p>
-    	<label for="emailAddress">Email Address:</label>
-        <input type="text" name="email" id="emailAddress">
-    </p>
-
 	<p>
     	<label for="password">Current Password:</label>
         <input type="password" name="password" id="password">
