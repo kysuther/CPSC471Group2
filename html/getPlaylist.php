@@ -17,7 +17,7 @@
                 
     #get songs from said playlist            
     $songs = "SELECT s.name
-                    FROM song s, contain c, playlist p
+                    FROM song s, contain c
                     WHERE c.TID=s.trackID AND c.Pname='$playlist_name'";
             
     // echo "done selecting";
