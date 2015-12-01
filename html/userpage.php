@@ -1,6 +1,6 @@
 <!--USER PAGE-->
 <?php include 'header.php' ?>
-
+<style type="text/css">
 #userimage {
   position:fixed;
   margin-top:100px;
@@ -55,7 +55,7 @@ text-transform: none;
 letter-spacing: 2px;
 text-align: center;
 }
-
+</style>
 
 <div id="userimage">
   <img src="http://i63.tinypic.com/3128kr4.jpg">
