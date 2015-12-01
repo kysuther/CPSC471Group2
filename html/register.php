@@ -1,6 +1,6 @@
 <!--REGISTER PAGE-->
 
-<?php include 'headerphp.php' ?>
+<?php include 'header.php' ?>
 <style type="text/css">
 #topimage {
     position:absolute;
@@ -74,4 +74,4 @@ button:hover {
 </div>
 </div>
 
-<?php include 'footerphp.php' ?>
+<?php include 'footer.php' ?>
