@@ -8,6 +8,7 @@
 
 <section class="container">
 <div class="section">
+
 <ul class="item">
 
 <li class="upload">
@@ -50,7 +51,5 @@
 
 </ul>
 </section>
-
-</div>
 </div>
 <?php include("footer.php") ?>
