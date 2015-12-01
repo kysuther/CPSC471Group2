@@ -2,14 +2,6 @@
 
 <?php include 'header.php' ?>
 <style type="text/css">
-#topimage {
-    position:absolute;
-    top:20px;
-}
-#topimage img {
-    height:auto;
-    width:auto;
-}
 form {
     position:fixed;
     z-index:9999999;
