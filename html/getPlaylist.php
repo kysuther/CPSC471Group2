@@ -14,20 +14,16 @@
 
     #$playlist_name = the name of playlist clicked on in playlists.php
     $playlist_name = $_GET['link'];
-    
-    #select said playlist            
-    $playlist = "SELECT *
-                FROM contain
-                WHERE Pname='$playlist_name'";
                 
     #get songs from said playlist            
-    $songs = "SELECT *
-                    FROM (song JOIN contain ON trackID=TID)";
+    $songs = "SELECT s.name
+                    FROM song s, contain c, playlist p
+                    WHERE c.TID=s.trackID AND c.Pname='$playlist_name'";
             
     // echo "done selecting";
     #if trackID = TID, print
     
-    if(($newResult = mysqli_query($link, $playlist)) && ($nResult = mysqli_query($link, $songs)))
+    if($nResult = mysqli_query($link, $songs))
     {
         // echo "first test is good";
             echo "<table>";
@@ -35,10 +31,10 @@
                     echo'<th style="font-size:200%">Track</th>';
                     // echo'<th style="font-size:200%">Artist</th>';
                 echo"</tr>";
-            while(($test = mysqli_fetch_array($newResult)) && ($test1 = mysqli_fetch_array($nResult)))
+            while($list = mysqli_fetch_array($nResult))
             {
                 echo "<tr>";
-                    echo '<td style="text-align:center;">' . $test1['name']. "</td>";
+                    echo '<td style="text-align:center;">' . $list['name']. "</td>";
                 echo "</tr>";
             }
             echo "</table>";

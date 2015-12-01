@@ -1,5 +1,6 @@
 <!--USER PAGE-->
 <?php include 'header.php' ?>
+<?php include 'requireslogin.php' ?>
 <style type="text/css">
 #userimage {
   position:fixed;
