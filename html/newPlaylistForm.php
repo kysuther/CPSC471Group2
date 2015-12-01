@@ -1,3 +1,8 @@
+<?php (include "header.php");
+echo "<br/>";
+echo "<br/>";
+echo "<br/>";
+?>
 <form action="" method="post">
     <p>
     	<label for="Name">Name:</label>
@@ -12,3 +17,4 @@
 
     <button type="submit" value="Create">Create</button>
 </form>
+<?php (include "footer.php")?>
