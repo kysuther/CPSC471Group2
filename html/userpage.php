@@ -63,7 +63,7 @@ text-align: center;
  
 <!-- START FIRST SECTION -->
 <div class="section">
-<!-- TITLE --> <div class="firsttitle">User Playlist</div> <!-- TITLE -->
+<!-- TITLE --> <?php echo '<div class="firsttitle">'.$_SESSION['userFname'].'\'s Playlists</div>' ?><!-- TITLE -->
 <table cellpadding="0">
  
 <!-- FIRST INFO -->

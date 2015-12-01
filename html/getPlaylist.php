@@ -22,13 +22,14 @@
                 
     #get songs from said playlist            
     $songs = "SELECT *
-                    FROM (song JOIN contain)";
+                    FROM (song JOIN contain ON trackID=TID)";
             
-    echo "done selecting";
+    // echo "done selecting";
+    #if trackID = TID, print
     
     if(($newResult = mysqli_query($link, $playlist)) && ($nResult = mysqli_query($link, $songs)))
     {
-        echo "first test is good";
+        // echo "first test is good";
             echo "<table>";
                 echo "<tr>";
                     echo'<th style="font-size:200%">Track</th>';
