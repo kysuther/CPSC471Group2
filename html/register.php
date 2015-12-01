@@ -74,7 +74,4 @@ button:hover {
 </div>
 </div>
 
-</body>
-</html>
-
 <?php include 'footerphp.php' ?>
