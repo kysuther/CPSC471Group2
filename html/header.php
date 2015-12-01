@@ -145,6 +145,8 @@ body{
 .container {
     width: 900px;
     margin: auto;
+    left:0;
+    right:0;
 }
 .section {
      padding: 10px;
@@ -156,6 +158,7 @@ body{
 }
 #thefooter {
     position:fixed;
+    z-index:9999999;
     bottom:0;
     width:100%;
     height:100px;
