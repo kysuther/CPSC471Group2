@@ -1,9 +1,6 @@
 <?php include("header.php") ?>
 
 <form style="z-index:9999999" action="changePass.php" method="post">
-<br/>
-<br/>
-
 <div >
 	<p>
     	<label for="currPass">Current Password:</label>

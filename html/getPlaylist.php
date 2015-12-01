@@ -1,8 +1,5 @@
 <?php
 	include("header.php");
-	echo '<br />';
-	echo '<br />';
-	echo '<br />';
 
     #personal testing link
     // $link = mysqli_connect("localhost", "root", "", "cpsc471_musicdatabase.sql");

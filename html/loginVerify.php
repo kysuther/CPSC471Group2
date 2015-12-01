@@ -1,8 +1,5 @@
 <?php
 	include("header.php");
-	echo '<br />';
-	echo '<br />';
-	echo '<br />';
 	$email_address = mysqli_real_escape_string($link,$_POST['email']);
 	$user_password = mysqli_real_escape_string($link,$_POST['password']);
 

@@ -1,8 +1,5 @@
 <?php
 	include("header.php");
-	echo '<br />';
-	echo '<br />';
-	echo '<br />';
 
 	$first_name = mysqli_real_escape_string($link, $_POST['firstname']);
 	$last_name = mysqli_real_escape_string($link, $_POST['lastname']);

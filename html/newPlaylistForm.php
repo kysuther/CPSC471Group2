@@ -1,15 +1,9 @@
-<?php (include "header.php");
-echo "<br/>";
-echo "<br/>";
-echo "<br/>";
-?>
+<?php (include "header.php")?>
 <form action="" method="post">
     <p>
     	<label for="Name">Name:</label>
         <input type="text" name="name" id="name">
-    </p>
-
-	<p>
+        <br/>
     	<label for="Type">Type:</label>
         <input type="type" name="type" id="type">
     </p>

@@ -1,9 +1,6 @@
 <?php include("header.php") ?>
 
 <form style="z-index:9999999" action="createAccountAdd.php" method="post">
-<br/>
-<br/>
-
 <div >
 	<p>
     	<label for="firstName">First Name:</label>

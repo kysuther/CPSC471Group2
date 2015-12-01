@@ -1,7 +1,4 @@
 <?php (include "header.php");
-echo "<br/>";
-echo "<br/>";
-echo "<br/>";
 
     $song = "SELECT *
             FROM song";
