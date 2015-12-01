@@ -100,14 +100,25 @@ body{
     background:#fff;
     border:1px solid #525252;
 }
+#imgcontainer {
+  width: 100%;
+  margin: auto;
+}
+.imgsection {
+  margin-bottom: 35px;
+  margin-left:0px;
+  margin-top:0px;
+}
 #topimage {
     position:relative;
     z-index:9999;
     height:600px;
     left:0px;
-    top:50px;
+    top:0px;
+    width:100%;
 }
 #topimage img{
+    margin:auto;
     max-height:600px;
     max-width:100%;
 }
@@ -141,13 +152,14 @@ body{
 }
 .container {
     width: 900px;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+}
+.section {
+     padding: 10px;
     text-align: center;
     position: relative;
     background: transparent;
     top:100px;
-    margin-left:240px;
     min-height:100%;
 }
 #thefooter {
@@ -174,11 +186,6 @@ body{
     color:#ffffff;
     letter-spacing:1px;
     font-size:14px;
-}
-#footernote a {
-    text-transform:none;
-    text-decoration:none;
-    color:#fff;
 }
 </style>
 <body>
