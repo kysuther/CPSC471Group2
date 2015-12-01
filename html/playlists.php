@@ -10,6 +10,7 @@ echo "<br/>";
     {
            die("ERROR: could not connect. " . mysqli_connect_error());
     }
+    echo $userID;
     // if($userID === null)
     // {
         // die("ERROR: not a set user")
@@ -46,7 +47,7 @@ echo "<br/>";
     echo "<br/>";
     echo "<br/>";
     echo "<br/>";
-    echo '<a href="newPlaylist.php">New Playlist</a>';
+    echo '<a href="newPlaylistForm.php">Create New Playlist</a>';
     
     mysqli_close($link);
 

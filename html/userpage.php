@@ -1,5 +1,5 @@
 <!--USER PAGE-->
-<?php include 'headerphp.php' ?>
+<?php include 'header.php' ?>
 
 #userimage {
   position:fixed;
@@ -92,7 +92,4 @@ text-align: center;
 </div>
 </div>
 
-</body>
-</html>
-
-<?php include 'footerphp.php' ?>
+<?php include 'footer.php' ?>

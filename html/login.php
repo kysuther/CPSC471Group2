@@ -1,6 +1,6 @@
 <!--LOGIN PAGE-->
 
-<?php include 'headerphp.php' ?>
+<?php include 'header.php' ?>
 
 <div id="topimage">
     <img src="http://i68.tinypic.com/244o8sk.png">
@@ -25,7 +25,4 @@
 </div>
 </div>
 
-</body>
-</html>
-
-<?php include 'headerphp.php' ?>
+<?php include 'footer.php' ?>

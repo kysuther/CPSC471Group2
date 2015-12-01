@@ -1,4 +1,4 @@
-<form action="loginVerify.php" method="post">
+<form action="" method="post">
     <p>
     	<label for="Name">Name:</label>
         <input type="text" name="name" id="name">
