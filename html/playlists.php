@@ -3,9 +3,6 @@ echo "<br/>";
 echo "<br/>";
 echo "<br/>";
 
-
-    #main server
-    #$link = mysqli_connect("localhost", "root", "jhong", "CPSC471_MusicDatabase");
     #personal testing info
     #$link = mysqli_connect("localhost", "root", "", "cpsc471_musicdatabase.sql");
 
@@ -16,7 +13,7 @@ echo "<br/>";
     
     $playlist = "SELECT *
                 FROM playlist";
-                #WHERE uid = sessionid";
+                #WHERE uid = userID";
                 
     if($result = mysqli_query($link, $playlist))
     {
@@ -33,20 +30,19 @@ echo "<br/>";
             echo "</table>";
             mysqli_free_result($result);
         }
-    }
-                
-    
         else
         {
             echo "There are no playlists yet";
         }
-    // else
-    // {
-        // echo "ERROR: Could not execute $sql." . mysqli_error($link);
-    // }
-
+    }
+    else
+    {
+        echo "ERROR: Could not execute $sql." . mysqli_error($link);
+    }
+    
+    echo <INPUT TYPE = "Text" VALUE = "add to playlist" NAME = "somehting?">;
+    
     mysqli_close($link);
-
 
 (include "footer.php");
 ?>

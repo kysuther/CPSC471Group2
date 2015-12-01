@@ -22,8 +22,11 @@
 				$result = mysqli_query($link, $sql);
 				
 				if(!$result){
-					echo '<p>Password change failed for unknown reason</p>';
+					echo '<p>Password change failed for unknown reason, please try again</p>';
 					echo '<meta http-equiv="Refresh" content="2; url=../changePassForm.php">';
+				}else{
+					echo '<p>Password Changed Successfully!</p>';
+					echo '<meta http-equiv="Refresh" content="2; url=../">';
 				}
 			}else{
 				echo '<p>Current password incorrect, please try again</p>';
