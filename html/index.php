@@ -1,7 +1,11 @@
 <?php include("header.php") ?>
 
+<div id="imgcontainer">
+<div class="imgsection">
 <div id="topimage">
     <img src="http://i68.tinypic.com/9q8d9u.png">
+</div>
+</div>
 </div>
 
 <div id="wrapper" style="width:100%;">
