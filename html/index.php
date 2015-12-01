@@ -30,7 +30,7 @@
 </li>
 
 <li class="share">
-<b>— share -</b></br>
+<b>- share -</b></br>
 <img src="http://i66.tinypic.com/k9ewwi.png">
 <p><font size="2">The online music database allows users to share their songs and playlists with other users. In order to do this, a user must upload a song or create a playlist and make it public. Once a song or a playlist is made public, other users can view or listen to it without further action from the uploader or creator.</font></p>
 </li>
