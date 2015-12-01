@@ -106,6 +106,7 @@ body{
     height:600px;
     left:0px;
     top:0px;
+    width:100%;
 }
 #topimage img{
     margin:auto;
