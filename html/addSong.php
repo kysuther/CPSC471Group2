@@ -4,32 +4,27 @@
     $playlist_name = $_GET['link'];
     $userID = $_SESSION["userID"];
     
-    $check = "SELECT trackID
+    $check = "SELECT *
             FROM song
-            WHERE songName='$song'";
-    
-    if($result = mysqli_query($link, $check))
+            WHERE songName = '$song'";
+            
+    $result = mysqli_query($link, $check);
+    while($row = mysqli_fetch_array($result))
     {
-        $sql = "INSERT INTO contain (TID, Pname, PUID)
-                VALUES ('$result', '$playlist_name', '$userID')
-                WHERE EXISTS
-                (SELECT *
-                FROM song
-                WHERE songName='$song')";
-        if(mysqli_query($link, $sql))
-        {
-            echo "Song was added to '$playlist_name'";
-        }
-    
-        else
-        {
-            echo "Failed to add '$song'";
-        }
-        
+        $trackID = $row['trackID'];
     }
+    
+    $sql = "INSERT INTO contain (TID, Pname, PUID)
+            VALUES ('$trackID', '$playlist_name', '$userID')";
+            
+    if(mysqli_query($link, $sql))
+    {
+        echo "Song was added to '$playlist_name'";
+    }
+
     else
     {
-        echo "Could not find '$song' in the database";
+        echo "Failed to add '$song'";
     }
     
     echo '<meta http-equiv="Refresh" content="2; url=../editPlaylist.php">';
