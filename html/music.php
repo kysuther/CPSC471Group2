@@ -9,7 +9,7 @@
     {
         if((mysqli_num_rows($sresult) > 0) && (mysqli_num_rows($aresult) > 0))
 		{
-            echo "<table cellpadding='10' border='4' style='width:40%;background-color:LimeGreen;float:right'>";
+            echo "<table cellpadding='10' border='4' style='width:50%;background-color:LimeGreen;'>";
                 echo "<tr>";
                     echo'<th style="font-size:200%">Track</th>';
                     echo'<th style="font-size:200%">Artist</th>';

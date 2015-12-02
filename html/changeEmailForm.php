@@ -7,7 +7,7 @@
         <input type="text" name="newEmail" id="newEmail">
     </p>
 	<p>
-    	<label for="currPass">Password:</label>
+    	<label for="currPass">Current Password:</label>
         <input type="password" name="currPass" id="currPass">
     </p>
     <input type="submit" value="Submit">
