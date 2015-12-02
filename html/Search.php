@@ -1,5 +1,4 @@
-<?php
-	include("header.php");
+<?php (include "header.php");
 	
 	$search_field = mysqli_real_escape_string($link, $_POST['SearchField']);
 	
@@ -152,4 +151,4 @@
 		echo "ERROR: Could not execute $sql." . mysqli_error($link);
 	}
 
-?>
+<?php (include "footer.php")?>
