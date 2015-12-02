@@ -16,7 +16,6 @@
     
     $sql = "INSERT INTO contain (TID, Pname, PUID)
             VALUES ('$trackID', '$playlist_name', '$userID')";
-            
     if(mysqli_query($link, $sql))
     {
         echo "Song was added to '$playlist_name'";
@@ -27,5 +26,5 @@
         echo "Failed to add '$song'";
     }
     
-    echo '<meta http-equiv="Refresh" content="2; url=../editPlaylist.php">';
+    echo '<meta http-equiv="Refresh" content="2; url=../editPlaylist.php?link=' .$playlist_name .'">';
 (include "footer.php");?>

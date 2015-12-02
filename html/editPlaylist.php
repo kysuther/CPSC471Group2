@@ -40,7 +40,7 @@
 ?>
 
 <html>
-<form action="addSong.php" method="post">
+<form action="addSong.php?link=<?php echo $_GET['link'];?>" method="post">
     <p>
     	<label for="addSong">Name Of Song To Add To Playlist:</label>
         <input type="text" name="addSong" id="addSong">
@@ -49,7 +49,7 @@
     <button type="submit" value="Add">Add</button>
 </form>
 <br/>
-<form action="deleteSong.php" method="post">
+<form action="deleteSong.php?link=<?php echo $_GET['link'];?>" method="post">
     <p>
     <label for="delSong">Name Of Song To Delete From Playlist:</label>
         <input type="text" name="delSong" id="delSong">
@@ -57,7 +57,7 @@
     <button type="submit" value="Delete">Delete</button>
 </form>
 <br/>
-<form action="renamePlaylist.php" method="post">
+<form action="renamePlaylist.php?link=<?php echo $_GET['link'];?>" method="post">
     <p>
     <label for="Rename">Change Playlist Name To:</label>
         <input type="text" name="Rename" id="Rename">
