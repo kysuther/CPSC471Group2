@@ -3,11 +3,13 @@
 <?php include 'header.php' ?>
 <style type="text/css">
 form {
-    position:fixed;
-    z-index:9999999;
+    position:absolute;
+    z-index:9999;
     top:250px;
-    left:100px;
-    width: 350px;
+    left:0;
+    right:0;
+    margin:auto;
+    width:350px;
     font-style:none;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     color:#fff;
@@ -34,8 +36,10 @@ button:hover {
 }
 </style>
 
+<div id="topimagebackground">
 <div id="topimage">
-    <img src="http://i64.tinypic.com/2nrd9cn.jpg">
+    <img src="http://i66.tinypic.com/334t955.jpg">
+</div>
 </div>
 
 <form action="createAccountAdd.php" method="post">
