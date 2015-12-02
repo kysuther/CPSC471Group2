@@ -9,7 +9,7 @@
     {
         if((mysqli_num_rows($sresult) > 0) && (mysqli_num_rows($aresult) > 0))
 		{
-            echo "<table>";
+            echo "<table cellpadding='10' border='4' style='width:40%;background-color:LimeGreen;float:right'>";
                 echo "<tr>";
                     echo'<th style="font-size:200%">Track</th>';
                     echo'<th style="font-size:200%">Artist</th>';
@@ -17,8 +17,8 @@
             while(($sRow = mysqli_fetch_array($sresult))&&($aRow = mysqli_fetch_array($aresult)))
 			{
 				echo "<tr>";
-					echo '<td style="text-align:center;">' . $sRow['name']. "</td>";
-                    echo '<td style="text-align:center;">' . $aRow['name']. "</td>";
+					echo '<td style="text-align:center;font-size:110%;">' . $sRow['songName']. "</td>";
+                    echo '<td style="text-align:center;font-size:110%;">' . $aRow['name']. "</td>";
 				echo "</tr>";
             }
             echo "</table>";

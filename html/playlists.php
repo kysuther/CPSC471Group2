@@ -1,15 +1,5 @@
 <?php (include "header.php");
-echo "<br/>";
-echo "<br/>";
-echo "<br/>";
-
-    #personal testing info
-    #$link = mysqli_connect("localhost", "root", "", "cpsc471_musicdatabase.sql");
-
-    if($link === false)
-    {
-           die("ERROR: could not connect. " . mysqli_connect_error());
-    }
+(include "requireslogin.php");
     $userID = $_SESSION["userID"];
     
     $playlist = "SELECT *

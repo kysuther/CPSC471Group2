@@ -1,32 +1,21 @@
 <?php
 	include("header.php");
-
-    #personal testing link
-    // $link = mysqli_connect("localhost", "root", "", "cpsc471_musicdatabase.sql");
-    
-	if($link === false)
-	{
-		die("ERROR: could not connect. " . mysqli_connect_error());
-	}
+    (include "requireslogin.php");
 
     #$playlist_name = the name of playlist clicked on in playlists.php
     $playlist_name = $_GET['link'];
                 
     #get songs from said playlist            
-    $songs = "SELECT s.name
+    $songs = "SELECT s.songName
                     FROM song s, contain c
                     WHERE c.TID=s.trackID AND c.Pname='$playlist_name'";
             
-    // echo "done selecting";
-    #if trackID = TID, print
     
     if($nResult = mysqli_query($link, $songs))
     {
-        // echo "first test is good";
             echo "<table>";
                 echo "<tr>";
                     echo'<th style="font-size:200%">Track</th>';
-                    // echo'<th style="font-size:200%">Artist</th>';
                 echo"</tr>";
             while($list = mysqli_fetch_array($nResult))
             {
