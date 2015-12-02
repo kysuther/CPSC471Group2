@@ -22,19 +22,22 @@
 	// The artist name doesn't exist then we insert it.
 	// Only need to insert into the SONGs Table
 	
+
+
 	/*
 		 This will insert the values into the Artists Table
 	*/
 	$sql = "INSERT INTO artists (name, webpage)
-				SELECT * FROM (SELECT '$Artist_name') AS tmp
+				SELECT * FROM (SELECT '$Artist_name', '$ArtistWebpage') AS tmp
 				WHERE NOT EXISTS (
 					SELECT name FROM artists WHERE name = '$Artist_name'
 				) LIMIT 1";
 	if(mysqli_query($link, $sql))
 	{
-		echo "Insert was sucessful!";
+		//echo "Insert was sucessful!";
 	}
 	
+
 	/*
 		inserting values into song table
 	*/
@@ -45,7 +48,7 @@
 				) LIMIT 1";
 	if(mysqli_query($link, $sql))
 	{
-		echo "Insert was sucessful!";
+		//echo "Insert was sucessful!";
 	}
 	
 	/*
@@ -58,10 +61,12 @@
 				) LIMIT 1";
 	if(mysqli_query($link, $sql))
 	{
-		echo "Insert was sucessful!";
+		//echo "Insert was sucessful!";
 	}
 	
 	
+
+
 	
 	
 	mysqli_close($link);

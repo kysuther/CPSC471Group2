@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Add Records Form</title>
-</head>
-<body>
+<?php include("header.php");?>
 <form action="insertData.php" method="post">
 	<p>
     	<label for="artistName">Artist Name:</label>
@@ -61,5 +55,4 @@
 	
     <input type="submit" value="SUBMIT">
 </form>
-</body>
-</html>
+<?php include("footer.php");?>
