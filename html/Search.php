@@ -1,11 +1,8 @@
 <?php
+	include("header.php")
 	
 	$link  = mysqli_connect("localhost", "root", "jhong", "CPSC471_MusicDatabase");
 
-	if($link === false)
-	{
-		die("ERROR: could not connect. " . mysqli_connect_error());
-	}
 	
 	$search_field = mysqli_real_escape_string($link, $_POST['SearchField']);
 	
@@ -157,8 +154,5 @@
 
 		echo "ERROR: Could not execute $sql." . mysqli_error($link);
 	}
-	
-	
-	mysqli_close($link);
 
 ?>
