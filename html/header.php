@@ -73,8 +73,9 @@ body{
 #userbuttons {
     position:relative;
     z-index:999999999;
-    margin-top:27px;
-    right:-1px;
+    margin-top:5px;
+    margin-bottom:5px;
+    right:0px;
 }
 #userbuttons a {
     text-decoration:none;

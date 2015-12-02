@@ -26,7 +26,7 @@
 				echo '<td style="text-align:center;font-size:100%;">' . $row['Fname']. "</td>";
 				echo '<td style="text-align:center;font-size:100%;">' . $row['Lname']. "</td>";
 				echo '<td style="text-align:center;font-size:100%;">' . $row['Type']. "</td>";
-				echo '<td style="text-align:center;font-size:100%;">EDIT</td>';
+				echo '<td style="text-align:center;font-size:100%;"><div id="userbuttons"><a href="/"><b>Edit</b></a></div></td>';
 				echo '</tr>';
 			}
 			

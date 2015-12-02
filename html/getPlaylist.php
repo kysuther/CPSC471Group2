@@ -11,21 +11,21 @@
                     WHERE c.TID=s.trackID AND c.Pname='$playlist_name'";
             
     
-    if($nResult = mysqli_query($link, $songs))
+    if($result = mysqli_query($link, $songs))
     {
-            echo "<table>";
-                echo "<tr>";
-                    echo'<th style="font-size:200%">Track</th>';
-                echo"</tr>";
-            while($list = mysqli_fetch_array($nResult))
-            {
-                echo "<tr>";
-                    echo '<td style="text-align:center;">' . $list['name']. "</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-            
-            mysqli_free_result($newResult);
+        echo "<table cellpadding='10' border='4' style='width:25%;background-color:LimeGreen;'>";
+            echo "<tr>";
+                echo'<th style="font-size:200%">Track</th>';
+            echo"</tr>";
+        while($row = mysqli_fetch_array($result))
+        {
+            echo "<tr>";
+                echo '<td style="text-align:center;">' . $row['songName']. "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        
+        mysqli_free_result($newResult);
     }
     else
     {
@@ -35,6 +35,7 @@
     echo "<br/>";
     echo "<br/>";
     echo '<a href="editPlaylist.php?link=' . $playlist_name . '">Edit Playlist</a>';
+    echo '<p style="text-align:right"><a href="playlists.php">Back To Playlists</a></p>';
 
 
     include("footer.php");
