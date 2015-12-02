@@ -114,6 +114,14 @@ body{
     right:0;
     margin:auto;
 }
+#topimagebackground {
+  position:relative;
+  width:100%;
+  height:100%;
+  padding-bottom:10px;
+  padding-top:10px;
+  background:#eeeaee;
+}
 .item {
     position: relative;
     margin: 0px auto;
@@ -125,7 +133,7 @@ body{
 }
 .item li {
     float: left;
-    width: 200px;
+    width: 250px;
     height: 300px;
     background: #fff;
     overflow: hidden;
@@ -149,7 +157,7 @@ body{
     right:0;
 }
 .section {
-     padding: 10px;
+    padding: 0;
     text-align: center;
     position: relative;
     background: transparent;
