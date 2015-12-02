@@ -25,36 +25,7 @@ margin-bottom: 35px;
   margin-top:-150px;
   
 }
-#userbuttons {
-    position:relative;
-    z-index:999999999;
-    margin-top:27px;
-    right:-1px;
-}
-#userbuttons a {
-    text-decoration:none;
-    text-transform:none;
 
-    margin-right:15px;
-    letter-spacing:1px;
-    padding:10px 20px 12px 17px;
-    font-size:16px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color:#fff;
-    background:#63d297;
-    -webkit-transition: 0.8s ease;
-    transition: 0.8s ease;
-    -moz-transition: 0.8s ease;
-    -o-transition: 0.8s ease;
-    border:1px solid #63d297;
-}
-#userbuttons a:hover {
-    text-transform:none;
-    text-decoration:none;
-    color:#63d297;
-    background:#fff;
-    border:1px solid #525252;
-}
  
 td {
 background-color: #ffffff;
