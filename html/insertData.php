@@ -1,13 +1,7 @@
 <?php
-	echo "<h1>Hello World</h1>";
-	$link = mysqli_connect("localhost", "root", "jhong","CPSC471_MusicDatabase");
 	
-	if($link === false)
-	{
-		die("ERROR: could not connect. " . mysqli_connect_error());
-	}
+	include("header.php");
 	
-		
 	$Artist_name = mysqli_real_escape_string($link, $_POST['artistName']);
 	$ArtistWebpage = mysqli_real_escape_string($link, $_POST['webpage']);
 	$song_name = mysqli_real_escape_string($link, $_POST['songName']);
@@ -64,10 +58,4 @@
 		//echo "Insert was sucessful!";
 	}
 	
-	
-
-
-	
-	
-	mysqli_close($link);
 ?>

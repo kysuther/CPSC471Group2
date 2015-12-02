@@ -1,5 +1,5 @@
 <?php
-	include("header.php")
+	include("header.php");
 	
 	$link  = mysqli_connect("localhost", "root", "jhong", "CPSC471_MusicDatabase");
 
