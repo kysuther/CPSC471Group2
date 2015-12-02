@@ -1,9 +1,6 @@
 <?php
 	include("header.php");
 	
-	$link  = mysqli_connect("localhost", "root", "jhong", "CPSC471_MusicDatabase");
-
-	
 	$search_field = mysqli_real_escape_string($link, $_POST['SearchField']);
 	
 	//echo "$search_field";
