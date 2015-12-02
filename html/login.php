@@ -33,8 +33,10 @@ button:hover {
     background-color:#63d297;
 }
 </style>
+<div id="topimagebackground">
 <div id="topimage">
-    <img src="http://i68.tinypic.com/244o8sk.png">
+    <img src="http://i68.tinypic.com/f4k51w.jpg">
+</div>
 </div>
 
 <form action="loginVerify.php" method="post">
