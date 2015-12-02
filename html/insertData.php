@@ -26,7 +26,7 @@
 		 This will insert the values into the Artists Table
 	*/
 	$sql = "INSERT INTO artists (name, webpage)
-				SELECT * FROM (SELECT '$Artist_name') AS tmp
+				SELECT * FROM (SELECT '$Artist_name', '$ArtistWebpage') AS tmp
 				WHERE NOT EXISTS (
 					SELECT name FROM artists WHERE name = '$Artist_name'
 				) LIMIT 1";
@@ -38,10 +38,10 @@
 	/*
 		inserting values into song table
 	*/
-	$sql = "INSERT INTO song (name, length, genre)
+	$sql = "INSERT INTO song (songName, Length, genre)
 				SELECT * FROM (SELECT '$song_name', '$song_length','$genre') AS tmp
 				WHERE NOT EXISTS (
-					SELECT name FROM song WHERE name = '$song_name'
+					SELECT songName FROM song WHERE songName = '$song_name'
 				) LIMIT 1";
 	if(mysqli_query($link, $sql))
 	{
@@ -51,10 +51,10 @@
 	/*
 		Inserting values into album table 
 	*/
-	$sql = "INSERT INTO album (name, year, numTracks)
+	$sql = "INSERT INTO album (albumName, year, numTracks)
 				SELECT * FROM (SELECT '$Album_name', '$albumYear','$alNumOfTracks') AS tmp
 				WHERE NOT EXISTS (
-					SELECT name FROM album WHERE name = '$Album_name'
+					SELECT albumName FROM album WHERE albumName = '$Album_name'
 				) LIMIT 1";
 	if(mysqli_query($link, $sql))
 	{
