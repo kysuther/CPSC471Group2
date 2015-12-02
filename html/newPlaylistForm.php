@@ -1,13 +1,10 @@
-<?php (include "header.php")?>
-<form action="" method="post">
+<?php (include "header.php");
+(include "requireslogin.php")?>
+<form action="newPlaylist.php" method="post">
     <p>
-    	<label for="Name">Name:</label>
-        <input type="text" name="name" id="name">
-        <br/>
-    	<label for="Type">Type:</label>
-        <input type="type" name="type" id="type">
+    	<label for="Name">Name of Playlist:</label>
+        <input type="text" name="Name" id="Name">
     </p>
-
 
     <button type="submit" value="Create">Create</button>
 </form>

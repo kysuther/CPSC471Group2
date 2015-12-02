@@ -1,4 +1,7 @@
 <?php (include "header.php");
+echo "<br/>";
+echo "<br/>";
+echo "<br/>";
 
     #personal testing info
     #$link = mysqli_connect("localhost", "root", "", "cpsc471_musicdatabase.sql");
@@ -7,14 +10,16 @@
     {
            die("ERROR: could not connect. " . mysqli_connect_error());
     }
-    echo $userID;
-    // if($userID === null)
-    // {
-        // die("ERROR: not a set user")
-    // }
+    $userID = $_SESSION["userID"];
+    
     $playlist = "SELECT *
-                FROM playlist";
-                #WHERE uid = userID";
+                FROM playlist
+                WHERE uid = '$userID'";
+                
+    if(!isset ($_SESSION["userID"]))
+    {
+        die("ERROR: not a user");
+    }
                 
     if($result = mysqli_query($link, $playlist))
     {
