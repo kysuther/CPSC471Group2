@@ -64,6 +64,10 @@
     </p>
     <button type="submit" value="Rename">Rename</button>
 </form>
+<br/>
+<br/>
+<br/>
+<p><a href=playlists.php>Return To Playlists</a></p>
 </html>
 
 <?php (include "footer.php")?>
