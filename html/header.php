@@ -198,10 +198,9 @@ body{
     <div id="userlinks">
     	<?php
     		if(isset($_SESSION['emailAddress'])){
-    			echo '<a href="/userpage.php"><b>My Music</b></a>';
-    			echo '<a href="/"><b>Account: '.$_SESSION['emailAddress'].'</b></a>';
+    			echo '<a href="/userpage.php"><b>My Account</b></a>';
     			if($_SESSION['accessLevel'] == 'admin')
-    				echo '<a href="/"><b>Admin</b></a>';
+    				echo '<a href="/adminPage.php"><b>Admin</b></a>';
     			echo '<a href="/logout.php"><b>Log Out</b></a>';
     		}else{
             echo '<a href="/music.php"><b>browse</b></a>';

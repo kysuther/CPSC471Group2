@@ -1,6 +1,6 @@
 <!--USER PAGE-->
-<?php include 'header.php' ?>
 <?php include 'requireslogin.php' ?>
+<?php include 'header.php' ?>
 <style type="text/css">
 #userimage {
   position:fixed;
@@ -94,7 +94,7 @@ text-align: center;
  
 <!-- START FIRST SECTION -->
 <div class="section">
-<!-- TITLE --> <?php echo '<div class="firsttitle">'.$_SESSION['userFname'].'\'s Playlists</div>' ?><!-- TITLE -->
+<!-- TITLE --> <?php echo '<div class="firsttitle">'.$_SESSION['userFname'].'\'s Music</div>' ?><!-- TITLE -->
 <table cellpadding="0">
  
 <!-- FIRST INFO -->
@@ -118,6 +118,12 @@ text-align: center;
   
 </tr>
 </table>
+<div id="userInfo">
+  <h3><u>User Information:</u></h3>
+  <?php echo '<p>Name: '.$_SESSION['userFname'].' '.$_SESSION['userLname'].'</p>'?>
+  <?php echo '<p>Account Type: '.$_SESSION['accessLevel'].'</p>'?>
+  <?php echo '<p>Email Address: '.$_SESSION['emailAddress'].'</p>'?>
+</div>
 <div id="userbuttons">
 <a href="/changeEmailForm.php"><b>Change Email</b></a>
 <a href="/changePassForm.php"><b>Change Password</b></a>

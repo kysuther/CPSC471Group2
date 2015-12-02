@@ -6,19 +6,16 @@
     
     $check = "SELECT trackID
             FROM song
-            WHERE EXISTS (songName = '$song')";
+            WHERE songName='$song'";
     
     if($result = mysqli_query($link, $check))
     {
-        echo "'$check'";
-        echo "'$result'";
         $sql = "INSERT INTO contain (TID, Pname, PUID)
                 VALUES ('$result', '$playlist_name', '$userID')
                 WHERE EXISTS
-                (SELECT name
+                (SELECT *
                 FROM song
-                WHERE name = '$song')";
-        echo "post sql";
+                WHERE songName='$song')";
         if(mysqli_query($link, $sql))
         {
             echo "Song was added to '$playlist_name'";

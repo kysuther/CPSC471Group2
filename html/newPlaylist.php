@@ -6,9 +6,7 @@
     
     $sql = "INSERT INTO playlist (name, uid)
             VALUES ('$newPlay', '$userID')";
-    echo "'$newPlay'";
-    echo "'$userID'";
-    echo "<br/>";
+
     if(mysqli_query($link, $sql))
     {
         echo "Playlist creation was successful";
@@ -18,6 +16,6 @@
     {
         echo "Failed to make a playlist";
     }
-    echo '<meta http-equiv="Refresh" content="2; url=../playlists.php">';
+    #echo '<meta http-equiv="Refresh" content="2; url=../playlists.php">';
     (include "footer.php");
 ?>

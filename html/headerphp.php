@@ -25,5 +25,13 @@
 	{
 		die("ERROR: could not connect. " . mysqli_connect_error());
 	}
+	
+	if($requiresLogin and (!(isset($_SESSION['emailAddress'])))){
+		header('Location: index.php');
+		exit;
+	}if($requiresAdmin and ($_SESSION['accessLevel'] != 'admin')){
+		header('Location: index.php');
+		exit;
+	}
 
 ?>

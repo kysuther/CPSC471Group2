@@ -48,7 +48,7 @@
 
     <button type="submit" value="Add">Add</button>
 </form>
-
+<br/>
 <form action="deleteSong.php" method="post">
     <p>
     <label for="delSong">Name Of Song To Delete From Playlist:</label>
@@ -56,7 +56,7 @@
     </p>
     <button type="submit" value="Delete">Delete</button>
 </form>
-
+<br/>
 <form action="renamePlaylist.php" method="post">
     <p>
     <label for="Rename">Change Playlist Name To:</label>
