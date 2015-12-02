@@ -35,7 +35,7 @@ button:hover {
 </style>
 
 <div id="topimage">
-    <img src="http://i68.tinypic.com/244o8sk.png">
+    <img src="http://i64.tinypic.com/2nrd9cn.jpg">
 </div>
 
 <form action="createAccountAdd.php" method="post">
