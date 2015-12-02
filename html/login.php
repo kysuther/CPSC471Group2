@@ -3,11 +3,13 @@
 <?php include 'header.php' ?>
 <style type="text/css">
 form {
-    position:fixed;
-    z-index:9999999;
-    top:240px;
-    left:320px;
-    width: 350px;
+    position:absolute;
+    z-index:9999;
+    top:250px;
+    left:0;
+    right:0;
+    margin:auto;
+    width:350px;
     font-style:none;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     color:#fff;
