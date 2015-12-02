@@ -16,6 +16,6 @@
     {
         echo "Insert failed";
     }
-    
+    echo '<meta http-equiv="Refresh" content="2; url=../playlists.php">';
     (include "footer.php");
 ?>
