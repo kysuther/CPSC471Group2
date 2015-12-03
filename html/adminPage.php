@@ -16,7 +16,7 @@
 			echo'<th style="font-size:100%">First Name</th>';
 			echo'<th style="font-size:100%">Last Name</th>';
 			echo'<th style="font-size:100%">Access Level</th>';
-			echo'<th style="font-size:100%">Delete User</th>';
+			echo'<th style="font-size:100%">Change Status</th>';
 			echo"</tr>";
 			
 			while($row = mysqli_fetch_array($result)){
@@ -26,10 +26,14 @@
 				echo '<td style="text-align:center;font-size:100%;">' . $row['Fname']. "</td>";
 				echo '<td style="text-align:center;font-size:100%;">' . $row['Lname']. "</td>";
 				echo '<td style="text-align:center;font-size:100%;">' . $row['Type']. "</td>";
-				if($row['Type'] != 'admin'){
-					echo '<td style="text-align:center;font-size:100%;"><div id="userbuttons"><a href="/"><b>Delete</b></a></div></td>';
-				}else{
+				if($row['email'] == $_SESSION['emailAddress']){
 					echo '<td style="text-align:center;font-size:100%;">Not Allowed</td>';
+				}else{
+					if($row['Type'] != 'admin'){
+						echo '<td style="text-align:center;font-size:100%;"><div id="userbuttons"><a href="/giveAdmin.php?link='.$row['userID'].'"><b>Make Admin</b></a></div></td>';
+					}else{
+						echo '<td style="text-align:center;font-size:100%;"><div id="userbuttons"><a href="/revokeAdmin.php?link='.$row['userID'].'"><b>Revoke Admin</b></a></div></td>';
+					}
 				}
 				echo '</tr>';
 			}

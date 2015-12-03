@@ -26,6 +26,15 @@
 		die("ERROR: could not connect. " . mysqli_connect_error());
 	}
 	
+	if(isset($_SESSION['emailAddress'])){
+		$email = $_SESSION['emailAddress'];
+		$sql = "SELECT `type` FROM `user` WHERE email = '$email'";
+		$result = mysqli_query($link, $sql);
+		while($row = mysqli_fetch_array($result)){
+			$_SESSION['accessLevel'] = $row['type'];
+		}
+	}
+	
 	if($requiresLogin and (!(isset($_SESSION['emailAddress'])))){
 		header('Location: index.php');
 		exit;
