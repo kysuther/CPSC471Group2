@@ -11,7 +11,7 @@
                 FROM playlist
                 WHERE name = '$playlist_name'";
        
-    if($cResult = mysqli_query($link, $getCont)
+    if($cResult = mysqli_query($link, $getCont))
     {
         echo "'$playlist_name' deleted from contain";
     }
