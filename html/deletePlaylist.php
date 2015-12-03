@@ -29,5 +29,5 @@
         echo "could not delete '$playlist_name'";
     }
     
-    echo '<meta http-equiv="Refresh" content="2; url=../editPlaylist.php?link=' .$playlist_name .'">';
+    echo '<meta http-equiv="Refresh" content="2; url=../playlists.php">';
 (include "footer.php");?>
