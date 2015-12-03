@@ -1,29 +1,35 @@
-<?php (include "requireslogin.php");
-(include "header.php");
-
+<?php
+    (include "header.php");
+?>
+    <form action="searchData.php" method="post">
+	<p>
+		<label for="SearchField">Enter Name of Artist/Band or Album or Songs</label>
+		<input type="text" name="SearchField" id="SearchField">
+	</p>
+	<input type="submit" value="Search">
+	</form>
+    <br />
+<?php
     $song = "SELECT *
             FROM song";
     $artist = "SELECT *
             FROM artists";
-
     if(($sresult = mysqli_query($link, $song)) && ($aresult = mysqli_query($link, $artist)))
     {
         if((mysqli_num_rows($sresult) > 0) && (mysqli_num_rows($aresult) > 0))
 		{
-            echo "<table cellpadding='10' border='4' margin:auto; top:0; bottom:0; left:0; right:0; style='width:50%;'>";
+            echo "<table cellpadding='8' border='3' style='width:50%; margin:auto;'>";
                 echo "<tr>";
-                    echo'<th style="font-size:200%">Track</th>';
-                    echo'<th style="font-size:200%">Artist</th>';
+                    echo'<th style="font-size:24px; letter-spacing:2px; text-;background:#63d297;color:#fff;">Track</th>';
+                    echo'<th style="font-size:24px; letter-spacing:2px; text-;background:#63d297;color:#fff;">Artist</th>';
                 echo"</tr>";
             while(($sRow = mysqli_fetch_array($sresult))&&($aRow = mysqli_fetch_array($aresult)))
 			{
 				echo "<tr>";
-					echo '<td style="text-align:center;font-size:110%; font-family:Helvetica, Helvetica, Arial, sans-serif;">' . $sRow['songName']. "</td>";
-                    echo '<td style="text-align:center;font-size:110%;">' . $aRow['name']. "</td>";
-				echo "</tr>";
+				echo '<td style="text-align:center;font-size:14px; font-family:Helvetica, Helvetica, Arial, sans-serif;color:#525252;letter-spacing:2px;">' . $sRow['songName']. "</td>";
+                    echo '<td style="text-align:center;font-size:14px; font-family:Helvetica, Helvetica, Arial, sans-serif;color:#525252;letter-spacing:2px;">' . $aRow['name']. "</td>";
             }
             echo "</table>";
-
             mysqli_free_result($sresult);
             mysqli_free_result($aresult);
         }
@@ -31,12 +37,13 @@
         {
             echo "No songs in the database yet";
         }
-
     }
     else
     {
         echo "ERROR: Could not execute $sql." . mysqli_error($link);
-    }
-    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><a href="../"><i>Back To Homepage</i></a></p>';
+    }?>
+    
+    
+<?php
 (include "footer.php");
 ?>
