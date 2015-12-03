@@ -1,5 +1,5 @@
-<?php (include "header.php");
-(include "requireslogin.php")?>
+<?php (include "requireslogin.php");
+(include "header.php");?>
 <form action="newPlaylist.php" method="post">
     <p>
     	<label for="Name">Name of Playlist:</label>

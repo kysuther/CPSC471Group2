@@ -1,4 +1,5 @@
-<?php (include "header.php");
+<?php (include "requireslogin.php");
+(include "header.php");
     
     $playlist_name = $_GET['link'];
     $userID = $_SESSION["userID"];

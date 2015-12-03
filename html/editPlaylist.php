@@ -1,5 +1,5 @@
-<?php (include "header.php");
-(include "requireslogin.php");
+<?php (include "requireslogin.php");
+(include "header.php");
 
     $song = "SELECT *
             FROM song";
