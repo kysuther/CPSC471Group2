@@ -4,11 +4,9 @@
 	$search_field = mysqli_real_escape_string($link, $_POST['SearchField']);	
 	
 	//echo "$search_field";
-
 	$sql = "SELECT A.name, A.webpage,B.albumName,S.songName, S.length,S.genre
 			FROM artists AS A, song AS S, album AS B
 			WHERE A.name = '$search_field' AND A.ArtistID = S.AID AND B.AID = A.ArtistID ";
-
 	//Songs that mathes the search field 
 	$sql2 = "SELECT A.name,S.songName, S.Length,S.genre
 			FROM artists AS A, song AS S
@@ -69,7 +67,7 @@
 		echo nl2br ("  ");
 		if(mysqli_num_rows($result) > 0)
 		{
-			echo "<table>";
+			echo "<table cellpadding = '10' border '4' style ='width:50%;'>";
 				echo "Songs containing '$search_field'";
 				echo "<tr>";
 					echo"<th>SONG NAME:</th>";
@@ -111,7 +109,7 @@
 		echo nl2br ("  ");
 		if(mysqli_num_rows($result) > 0)
 		{
-			echo "<table cellpadding = '10' border '4' style ='width:50%;background-color:LimeGreen;'>";
+			echo "<table cellpadding = '10' border '4' style ='width:50%;'>";
 				echo "Albums containing '$search_field'";
 				echo "<tr>";
 					echo"<th>Album Name:</th>";
@@ -146,6 +144,5 @@
 	}	
 	
 	include("footer.php");
-
 	
 ?>
