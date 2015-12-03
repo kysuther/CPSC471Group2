@@ -1,23 +1,17 @@
 <?php
-	
-	$link  = mysqli_connect("localhost", "root", "", "CPSC471_musicdatabase");
-	if($link === false)
-	{
-		die("ERROR: could not connect. " . mysqli_connect_error());
-	}
-	
-	$search_field = mysqli_real_escape_string($link, $_POST['SearchField']);
+	include("header.php");
+	echo "<h1>Search Results:</h1>";
+	$search_field = mysqli_real_escape_string($link, $_POST['SearchField']);	
 	
 	//echo "$search_field";
-	
-	//Artists that matches the Seacrch field 
+
 	$sql = "SELECT A.name, A.webpage,B.albumName,S.songName, S.length,S.genre
 			FROM artists AS A, song AS S, album AS B
 			WHERE A.name = '$search_field' AND A.ArtistID = S.AID AND B.AID = A.ArtistID ";
-	
+
 	//Songs that mathes the search field 
-	$sql2 = "SELECT A.name,S.songName, S.length,S.genre
-			FROM Artists AS A, song AS S
+	$sql2 = "SELECT A.name,S.songName, S.Length,S.genre
+			FROM artists AS A, song AS S
 			WHERE S.songName = '$search_field' AND A.ArtistID = S.AID";
 	
 	// Albums that matches the search field 
@@ -69,7 +63,6 @@
 	{
 		echo "ERROR: Could not execute $sql." . mysqli_error($link);
 	}
-	
 	//Branch for checking Songs that macth with the search field 
 	if($result = mysqli_query($link, $sql2))
 	{
@@ -150,8 +143,9 @@
 	{
 	
 		echo "ERROR: Could not execute $sql." . mysqli_error($link);
-	}
+	}	
 	
+	include("footer.php");
+
 	
-	mysqli_close($link);
 ?>
