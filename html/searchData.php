@@ -24,7 +24,7 @@
 	{
 		if(mysqli_num_rows($result) > 0)
 		{
-			echo "<table>";
+			echo "<table cellpadding = '10' border '4' style ='width:50%;'>";
 				echo "Artists containing $search_field";
 				echo "<tr>";
 					echo"<th>ARTIST NAME:</th>";
@@ -69,7 +69,7 @@
 		echo nl2br ("  ");
 		if(mysqli_num_rows($result) > 0)
 		{
-			echo "<table>";
+			echo "<table cellpadding = '10' border '4' style ='width:50%;'>";
 				echo "Songs containing '$search_field'";
 				echo "<tr>";
 					echo"<th>SONG NAME:</th>";
@@ -111,7 +111,7 @@
 		echo nl2br ("  ");
 		if(mysqli_num_rows($result) > 0)
 		{
-			echo "<table>";
+			echo "<table cellpadding = '10' border '4' style ='width:50%;'>";
 				echo "Albums containing '$search_field'";
 				echo "<tr>";
 					echo"<th>Album Name:</th>";
