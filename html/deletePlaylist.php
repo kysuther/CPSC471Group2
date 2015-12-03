@@ -13,11 +13,11 @@
        
     if($cResult = mysqli_query($link, $getCont))
     {
-        echo "'$playlist_name' deleted from contain";
+        // echo "'$playlist_name' deleted from contain";
     }
     else
     {
-        echo "could not empty contain";
+        // echo "could not empty contain";
     }
     
     if($pResult = mysqli_query($link, $getPlay))
