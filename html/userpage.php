@@ -66,29 +66,10 @@ text-align: center;
 <!-- START FIRST SECTION -->
 <div class="section">
 <!-- TITLE --> <?php echo '<div class="firsttitle">'.$_SESSION['userFname'].'\'s Music</div>' ?><!-- TITLE -->
-<table cellpadding="0">
- 
-<!-- FIRST INFO -->
-<tr>
-<td class="firsttop" width="50px">#</td> <td class="firsttop" width="475px">Title</td> <td class="firsttop" width="275px">Artist</td> <td class="firsttop" width="155px">Length</td>
-<td class="firsttop" width="175px">Genre</td>
-</tr>
-<!-- FIRST INFO -->
-
-<tr>
-<td class="first" width="50px">1</td> <td class="first" width="175px">Shining Diamond</td> <td class="first" width="175px">Seventeen</td>
-  <td class="first" width="175px">3:21</td>
-  <td class="first" width="175px">K-Pop</td>
-</tr>
-
-<tr>
-<td class="second" width="50px">2</td> <td class="first" width="175px">Whoop</td> <td class="first" width="175px">WhoopWhoop</td>
-  <td class="first" width="175px">00:00</td>
-  <td class="first" width="175px">N/A</td>
-</tr>
-  
-</tr>
-</table>
+<div id="userbuttons">
+<a href="/playlists.php"><b>My Playlists</b></a>
+<a href="/music.php"><b>Browse Music</b></a>
+</div>
 <div id="userInfo">
   <h3><u>User Information:</u></h3>
   <?php echo '<p>Name: '.$_SESSION['userFname'].' '.$_SESSION['userLname'].'</p>'?>
@@ -98,8 +79,6 @@ text-align: center;
 <div id="userbuttons">
 <a href="/changeEmailForm.php"><b>Change Email</b></a>
 <a href="/changePassForm.php"><b>Change Password</b></a>
-<a href="/playlists.php"><b>My Playlists</b></a>
-<a href="/music.php"><b>Browse Music</b></a>
 </div>
 </div>
 </div>

@@ -20,7 +20,7 @@
             while($row = mysqli_fetch_array($result))
             {
                 echo "<tr>";
-                echo "<td style='font-size:150%;text-align:center;font-family:Helvetica'>" . '<a href="getPlaylist.php?link=' . $row["name"]. '">' . $row['name']."</a></td>";
+                echo "<td style='font-size:150%;text-align:center;font-family:Helvetica'>" . '<div id="userbuttons"><a href="getPlaylist.php?link=' . $row["name"]. '">' . $row['name']."</a></div></td>";
                 echo "</tr>";
             }
             echo "</table>";
@@ -39,7 +39,7 @@
     echo "<br/>";
     echo "<br/>";
     echo "<hr/>";
-    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><a href="newPlaylistForm.php"><i>Create New Playlist</i></a></p>';
+    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><div id="userbuttons"><a href="newPlaylistForm.php"><i>Create New Playlist</i></a></div></p>';
     
     mysqli_close($link);
 
