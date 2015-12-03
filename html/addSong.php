@@ -8,22 +8,28 @@
             FROM song
             WHERE songName = '$song'";
             
-    $result = mysqli_query($link, $check);
-    while($row = mysqli_fetch_array($result))
+    if($result = mysqli_query($link, $check))
     {
-        $trackID = $row['trackID'];
-    }
-    
-    $sql = "INSERT INTO contain (TID, Pname, PUID)
-            VALUES ('$trackID', '$playlist_name', '$userID')";
-    if(mysqli_query($link, $sql))
-    {
-        echo "Song was added to '$playlist_name'";
-    }
+        while($row = mysqli_fetch_array($result))
+        {
+            $trackID = $row['trackID'];
+        }
+        
+        $sql = "INSERT INTO contain (TID, Pname, PUID)
+                VALUES ('$trackID', '$playlist_name', '$userID')";
+        if(mysqli_query($link, $sql))
+        {
+            echo "Song was added to '$playlist_name'";
+        }
 
+        else
+        {
+            echo "Failed to add '$song'";
+        }
+    }
     else
-    {
-        echo "Failed to add '$song'";
+    {    
+        echo "'$song' does not exist in the database";
     }
     
     echo '<meta http-equiv="Refresh" content="2; url=../editPlaylist.php?link=' .$playlist_name .'">';

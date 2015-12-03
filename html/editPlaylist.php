@@ -12,11 +12,11 @@
 		{
             echo "<table cellpadding='10' border='4' style='width:40%;background-color:LimeGreen;float:right'>";
                 echo "<tr>";
-                    echo'<th style="font-size:225%">All Songs</th>';
+                    echo'<td colspan="2" style="font-size:225%;text-align:center">All Songs</td>';
                 echo "</tr>";
                 echo "<tr>";
-                    echo'<td style="font-size:200%">Track</td>';
-                    echo'<td style="font-size:200%">Artist</td>';
+                    echo'<td style="font-size:200%;text-align:center">Track</td>';
+                    echo'<td style="font-size:200%;text-align:center">Artist</td>';
                 echo"</tr>";
             while(($sRow = mysqli_fetch_array($sresult))&&($aRow = mysqli_fetch_array($aresult)))
 			{
