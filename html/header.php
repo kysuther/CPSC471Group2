@@ -72,7 +72,7 @@ body{
 }
 #userbuttons {
     position:relative;
-    z-index:999999999;
+    z-index:999;
     margin-top:5px;
     margin-bottom:5px;
     right:0px;

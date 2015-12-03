@@ -2,7 +2,7 @@
 (include "header.php");
     
     $song = mysqli_real_escape_string($link, $_POST['addSong']);
-    $playlist_name = $_GET['link'];
+    $playlist_name = mysqli_real_escape_string($link, $_GET['link']);
     $userID = $_SESSION["userID"];
     
     $check = "SELECT *

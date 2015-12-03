@@ -2,14 +2,13 @@
 	include 'requiresadmin.php';
 	include 'requireslogin.php';
 	include 'header.php';
-?>
-<h1 align='center'>Administration Page</h1>
-<?php 
+	echo "<h1 align='center'>Administration Page</h1>";
 	$sql = 'SELECT * FROM user';
 	$result = mysqli_query($link, $sql);
 	if($result){
 		if(mysqli_num_rows($result) > 0){
-			echo "<table align='center' cellpadding='10' border='4' style='width:50%;background-color:White;'>";
+			echo '<div>';
+			echo "<table align='center' cellpadding='10' border='4' style='width:65%;background-color:White;padding-bottom:95px;'>";
 			echo "<tr>";
 			echo'<th style="font-size:100%">User ID</th>';
 			echo'<th style="font-size:100%">Email Address</th>';
@@ -36,16 +35,12 @@
 					}
 				}
 				echo '</tr>';
+				
 			}
 			
 		}else{
 			echo '<p>Could Not Load Users!</p>';
 		}
+	echo '</div>';
 	}
-
-?>
-
-
-
-
-<?php include 'footer.php' ?>
+include 'footer.php' ?>

@@ -10,7 +10,7 @@
     {
         if((mysqli_num_rows($sresult) > 0) && (mysqli_num_rows($aresult) > 0))
 		{
-            echo "<table cellpadding='10' border='4' style='width:40%;float:right'>";
+            echo "<table cellpadding='10'  border='4' style='width:40%;float:right;padding-bottom:95px;'>";
                 echo "<tr>";
                     echo'<td colspan="2" style="font-size:225%;text-align:center;background-color:LimeGreen">All Songs</td>';
                 echo "</tr>";
