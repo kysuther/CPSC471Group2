@@ -61,8 +61,6 @@
 		echo "Insert was sucessful!";
 	}
 	
-	
-	
-	
 	mysqli_close($link);
+    echo '<meta http-equiv="Refresh" content="1; url=../artistInsertForm.php">';
 ?>

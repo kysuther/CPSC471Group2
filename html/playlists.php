@@ -15,12 +15,12 @@
     {
         if(mysqli_num_rows($result) > 0)
         {
-            echo "<h1 style='text-align:center;'>Playlists</h1>";
-            echo "<table style='width:100%'>";
+            echo "<h1 style='text-align:center;font-size:300%'>Playlists</h1>";
+            echo "<table cellpadding='10' style='width:100%'>";
             while($row = mysqli_fetch_array($result))
             {
                 echo "<tr>";
-                echo "<td style='font-size:125%;text-align:center;'>" . '<a href="getPlaylist.php?link=' . $row["name"]. '">' . $row['name']."</a></td>";
+                echo "<td style='font-size:150%;text-align:center;font-family:Helvetica'>" . '<a href="getPlaylist.php?link=' . $row["name"]. '">' . $row['name']."</a></td>";
                 echo "</tr>";
             }
             echo "</table>";
@@ -28,7 +28,7 @@
         }
         else
         {
-            echo "There are no playlists yet";
+            echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Blue'>There Are No Playlists Yet</p>";
         }
     }
     else
@@ -38,8 +38,8 @@
     
     echo "<br/>";
     echo "<br/>";
-    echo "<br/>";
-    echo '<a href="newPlaylistForm.php">Create New Playlist</a>';
+    echo "<hr/>";
+    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><a href="newPlaylistForm.php"><i>Create New Playlist</i></a></p>';
     
     mysqli_close($link);
 

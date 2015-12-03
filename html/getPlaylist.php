@@ -14,28 +14,27 @@
     {
         echo "<table cellpadding='10' border='4' style='width:25%;background-color:LimeGreen;'>";
             echo "<tr>";
-                echo'<th style="font-size:200%">Track</th>';
+                echo "<th style='font-size:250%'><i>Songs in '$playlist_name'</i></th>";
+            echo "</tr>";
+            echo "<tr>";
+                echo'<td style="font-size:200%;text-align:center"><b>Tracks</b></td>';
             echo"</tr>";
         while($row = mysqli_fetch_array($result))
         {
             echo "<tr>";
-                echo '<td style="text-align:center;">' . $row['songName']. "</td>";
+                echo '<td style="text-align:center;font-size:125%">' . $row['songName']. "</td>";
             echo "</tr>";
         }
         echo "</table>";
         
         mysqli_free_result($newResult);
     }
-    else
-    {
-        echo "first if fail";
-    }
     echo "<br/>";
     echo "<br/>";
     echo "<br/>";
-    echo '<a href="editPlaylist.php?link=' . $playlist_name . '">Edit Playlist</a>';
-    echo '<p style="text-align:right"><a href="playlists.php">Back To Playlists</a></p>';
-
+    echo "<p style='font-size:150%;font-family:Helvetica;text-align:right'><a href='editPlaylist.php?link=" . $playlist_name . "'><i>Edit Playlist</i></a></p>";
+    echo "<hr/>";
+    echo "<p style='font-size:150%;font-family:Helvetica;text-align:right'><a href='playlists.php'><i>Back To Playlists</i></a></p>";
 
     include("footer.php");
 ?>

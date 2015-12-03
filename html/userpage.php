@@ -99,6 +99,7 @@ text-align: center;
 <a href="/changeEmailForm.php"><b>Change Email</b></a>
 <a href="/changePassForm.php"><b>Change Password</b></a>
 <a href="/playlists.php"><b>My Playlists</b></a>
+<a href="/music.php"><b>Browse Music</b></a>
 </div>
 </div>
 </div>

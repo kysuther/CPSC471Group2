@@ -37,5 +37,6 @@
     {
         echo "ERROR: Could not execute $sql." . mysqli_error($link);
     }
+    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><a href="../"><i>Back To Homepage</i></a></p>';
 (include "footer.php");
 ?>

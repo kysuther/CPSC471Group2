@@ -20,12 +20,12 @@
                 VALUES ('$trackID', '$playlist_name', '$userID')";
         if(mysqli_query($link, $sql))
         {
-            echo "Song was added to '$playlist_name'";
+            echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Blue'>'$song' was added to '$playlist_name'</p>";
         }
 
         else
         {
-            echo "Failed to add '$song'";
+            echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Red'>Failed to add '$song'</p>";
         }
     }
     else

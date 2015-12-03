@@ -21,12 +21,12 @@
             
     if(mysqli_query($link, $sql))
     {
-        echo "'$song' is no longer in '$playlist_name'";
+        echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Blue'>'$song' is no longer in '$playlist_name'</p>";
     }
 
     else
     {
-        echo "Failed to delete '$song'";
+       echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Blue'> Failed to delete '$song'</p>";
     }
     
     echo '<meta http-equiv="Refresh" content="2; url=../editPlaylist.php?link=' .$playlist_name .'">';

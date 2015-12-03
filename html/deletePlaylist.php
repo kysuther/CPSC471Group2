@@ -11,7 +11,7 @@
     $getPlay = "DELETE
                 FROM playlist
                 WHERE name = '$playlist_name'";
-       
+    
     if($cResult = mysqli_query($link, $getCont))
     {
         // echo "'$playlist_name' deleted from contain";
@@ -23,11 +23,11 @@
     
     if($pResult = mysqli_query($link, $getPlay))
     {
-        echo "'$playlist_name' has been deleted";
+        echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Blue'>'$playlist_name' Has Been Deleted</p>";
     }
     else
     {
-        echo "could not delete '$playlist_name'";
+        echo "<p style='font-size:200%;font-family:Helvetica;text-align:center;color:Red'>Could Not Delete '$playlist_name'</p>";
     }
     
     echo '<meta http-equiv="Refresh" content="2; url=../playlists.php">';

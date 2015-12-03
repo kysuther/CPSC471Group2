@@ -44,32 +44,35 @@
 
 <html>
 <form action="addSong.php?link=<?php echo $_GET['link'];?>" method="post">
-    <p>
+    <p style="font-size:150%">
     	<label for="addSong">Name Of Song To Add To Playlist:</label>
-        <input type="text" name="addSong" id="addSong">
+        <input type="text" name="addSong" id="addSong" style="width:200px;height:20px">
     </p>
 
-    <button type="submit" value="Add">Add</button>
+    <button type="submit" value="Add" style="width:150px"><b>Add</b></button>
 </form>
-<br/>
 
 <form action="deleteSong.php?link=<?php echo $_GET['link'];?>" method="post">
-    <p>
+    <p style="font-size:150%">
     <label for="delSong">Name Of Song To Delete From Playlist:</label>
-        <input type="text" name="delSong" id="delSong">
+        <input type="text" name="delSong" id="delSong" style="width:200px;height:20px">
     </p>
-    <button type="submit" value="Delete">Delete</button>
+    <button type="submit" value="Delete" style="width:150px"><b>Delete</b></button>
 </form>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 
 <form action="deletePlaylist.php?link=<?php echo $_GET['link'];?>" method="post">
-    <button type="submit" value="delPlaylist">Delete Playlist</button>
+    <button type="submit" value="delPlaylist" style="width:150px"><b>Delete Playlist</b></button>
 </form>
 
 <br/>
 <br/>
 <br/>
-<p><a href=playlists.php>Return To Playlists</a></p>
+<p style="font-size:150%"><i><a href=playlists.php>Return To Playlists</i></a></p>
 </html>
 
 <?php (include "footer.php")?>
