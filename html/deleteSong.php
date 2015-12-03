@@ -1,4 +1,5 @@
-<?php (include "header.php");
+<?php (include "requireslogin.php");
+(include "header.php");
     
     $song = mysqli_real_escape_string($link, $_POST['delSong']);
     $playlist_name = $_GET['link'];

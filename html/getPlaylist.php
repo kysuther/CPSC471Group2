@@ -1,6 +1,5 @@
-<?php
+<?php (include "requireslogin.php");
 	include("header.php");
-    (include "requireslogin.php");
 
     #$playlist_name = the name of playlist clicked on in playlists.php
     $playlist_name = $_GET['link'];
