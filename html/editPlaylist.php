@@ -10,19 +10,19 @@
     {
         if((mysqli_num_rows($sresult) > 0) && (mysqli_num_rows($aresult) > 0))
 		{
-            echo "<table cellpadding='10' border='4' style='width:40%;background-color:LimeGreen;float:right'>";
+            echo "<table cellpadding='10' border='4' style='width:40%;float:right'>";
                 echo "<tr>";
-                    echo'<td colspan="2" style="font-size:225%;text-align:center">All Songs</td>';
+                    echo'<td colspan="2" style="font-size:225%;text-align:center;background-color:LimeGreen">All Songs</td>';
                 echo "</tr>";
                 echo "<tr>";
-                    echo'<td style="font-size:200%;text-align:center">Track</td>';
-                    echo'<td style="font-size:200%;text-align:center">Artist</td>';
+                    echo'<td style="font-size:200%;text-align:center;background-color:LimeGreen">Track</td>';
+                    echo'<td style="font-size:200%;text-align:center;background-color:LimeGreen">Artist</td>';
                 echo"</tr>";
             while(($sRow = mysqli_fetch_array($sresult))&&($aRow = mysqli_fetch_array($aresult)))
 			{
 				echo "<tr>";
-					echo '<td style="text-align:center;font-size:110%;">' . $sRow['songName']. "</td>";
-                    echo '<td style="text-align:center;font-size:110%;">' . $aRow['name']. "</td>";
+					echo '<td style="text-align:center;font-size:110%;background-color:Red">' . $sRow['songName']. "</td>";
+                    echo '<td style="text-align:center;font-size:110%;background-color:Aqua">' . $aRow['name']. "</td>";
 				echo "</tr>";
             }
             echo "</table>";
@@ -72,7 +72,7 @@
 <br/>
 <br/>
 <br/>
-<p style="font-size:150%"><i><a href=playlists.php>Return To Playlists</i></a></p>
+<div id="userbuttons"><a href=playlists.php>Return To Playlists</a></div>
 </html>
 
 <?php (include "footer.php")?>

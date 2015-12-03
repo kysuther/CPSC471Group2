@@ -32,9 +32,11 @@
     echo "<br/>";
     echo "<br/>";
     echo "<br/>";
-    echo "<p style='font-size:150%;font-family:Helvetica;text-align:right'><a href='editPlaylist.php?link=" . $playlist_name . "'><i>Edit Playlist</i></a></p>";
+    echo "<div id='userbuttons' align='right'><a href='editPlaylist.php?link=" . $playlist_name . "'>Edit Playlist</a></div>";
+    echo "<br/>";
     echo "<hr/>";
-    echo "<p style='font-size:150%;font-family:Helvetica;text-align:right'><a href='playlists.php'><i>Back To Playlists</i></a></p>";
+    echo "<br/>";
+    echo "<div id='userbuttons' align='right'><a href='playlists.php'>Back To Playlists</a></div>";
 
     include("footer.php");
 ?>

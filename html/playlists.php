@@ -39,7 +39,7 @@
     echo "<br/>";
     echo "<br/>";
     echo "<hr/>";
-    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><div id="userbuttons"><a href="newPlaylistForm.php"><i>Create New Playlist</i></a></div></p>';
+    echo '<p style="font-size:150%;font-family:Helvetica;text-align:right"><div id="userbuttons" align="right"><a href="newPlaylistForm.php"><i>Create New Playlist</i></a></div></p>';
     
     mysqli_close($link);
 
