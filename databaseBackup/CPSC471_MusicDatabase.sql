@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2015 at 01:21 PM
+-- Generation Time: Dec 03, 2015 at 04:21 PM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `album` (
   `numTracks` int(100) NOT NULL,
   `AID` int(5) NOT NULL,
   PRIMARY KEY (`albumID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `album`
@@ -62,14 +62,15 @@ INSERT INTO `album` (`albumID`, `albumName`, `year`, `numTracks`, `AID`) VALUES
 (28, 'Rap God', 6561, 5, 41),
 (29, 'Far West Closure', 1958, 5862, 43),
 (30, 'Monkey and Apes', 2001, 8, 44),
-(31, 'The Test Album', 1990, 8, 0),
-(32, 'JTAlbum', 1998, 45, 0),
-(33, 'Ilike the weekend', 2015, 34, 0),
-(34, 'Yes', 2056, 90, 0),
-(35, 'Cara me Please', 1990, 34, 0),
-(36, 'HERE', 2015, 34, 0),
-(37, '1989', 1990, 13, 0),
-(38, 'bad', 9088, 3, 0);
+(31, 'The Test Album', 1990, 8, 39),
+(32, 'JTAlbum', 1998, 45, 40),
+(33, 'Ilike the weekend', 2015, 34, 47),
+(34, 'Yes', 2056, 90, 46),
+(35, 'Cara me Please', 1990, 34, 47),
+(36, 'HERE', 2015, 34, 40),
+(37, '1989', 1990, 13, 51),
+(38, 'bad', 9088, 3, 48),
+(39, 'Name', 1990, 8, 0);
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `artists` (
   `webpage` varchar(255) DEFAULT NULL,
   `CollabArtistID` int(5) NOT NULL,
   PRIMARY KEY (`ArtistID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
 
 --
 -- Dumping data for table `artists`
@@ -91,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `artists` (
 
 INSERT INTO `artists` (`ArtistID`, `name`, `webpage`, `CollabArtistID`) VALUES
 (17, 'work', 'work.com', 0),
-(18, 'B.o.B. (feat. Hayley Williams)', 'bob1.com', 0),
+(18, 'B.o.B. (feat. Hayley Williams)', 'bob1.com', 53),
 (19, 'Beach House', 'beachhouse.com', 0),
 (20, 'Beyoncé', 'beyonce.com', 0),
 (21, 'Big Boi (feat. Cutty)', 'bigboi.com', 0),
@@ -124,7 +125,8 @@ INSERT INTO `artists` (`ArtistID`, `name`, `webpage`, `CollabArtistID`) VALUES
 (49, 'Alessia Cara', 'AC.com', 0),
 (50, 'Selena Gomez', 'SG.com', 0),
 (51, 'Taylor Swift', 'TS.com', 0),
-(52, 'Arianna Grande', 'AG.com', 0);
+(52, 'Arianna Grande', 'AG.com', 0),
+(53, 'Hayley Williams', 'HW.com', 0);
 
 -- --------------------------------------------------------
 
@@ -160,12 +162,26 @@ CREATE TABLE IF NOT EXISTS `contain` (
 INSERT INTO `contain` (`TID`, `Pname`, `PUID`) VALUES
 (6, 'name2', 3),
 (6, 'name3', 3),
+(12, 'name2', 3),
 (6, 'AndrewPlay1', 4),
 (7, 'AndrewPlay1', 4),
 (7, 'AndrewPlay2', 4),
 (8, 'AndrewPlay1', 4),
 (9, 'AndrewPlay1', 4),
-(6, '3', 5);
+(7, 'Favorites', 5),
+(8, 'Favorites', 5),
+(11, 'Favorites', 5),
+(15, 'Favorites', 5),
+(19, 'Pump up', 5),
+(20, 'Pump up', 5),
+(22, 'Favorites', 5),
+(23, 'Pump up', 5),
+(24, 'Favorites', 5),
+(29, 'Pump up', 5),
+(32, 'Pump up', 5),
+(33, 'Pump up', 5),
+(38, 'Favorites', 5),
+(40, 'Pump up', 5);
 
 -- --------------------------------------------------------
 
@@ -212,13 +228,13 @@ CREATE TABLE IF NOT EXISTS `playlist` (
 --
 
 INSERT INTO `playlist` (`name`, `uid`, `Type`) VALUES
-('1', 5, ''),
-('1', 6, ''),
-('3', 5, ''),
 ('AndrewPlay1', 4, 'PUB'),
 ('AndrewPlay2', 4, 'PUB'),
+('Favorites', 5, ''),
 ('name2', 3, 'P'),
-('name3', 3, 'P');
+('name3', 3, 'P'),
+('Pump up', 5, ''),
+('Seventeen Thirty Eight', 5, '');
 
 -- --------------------------------------------------------
 
@@ -311,14 +327,14 @@ INSERT INTO `song` (`trackID`, `sample`, `songName`, `genre`, `Length`, `remixTr
 (32, NULL, 'Love the Way You Lie', 'Country', '2:43', NULL, NULL, 41),
 (33, NULL, 'Like A G6', 'Electronic', '2:45', NULL, NULL, 43),
 (34, NULL, 'Stylo (feat. Mos Def)', 'Dubstep', '3:43', NULL, NULL, 44),
-(35, NULL, 'The Cover', 'Rock', '4:56', NULL, NULL, 0),
-(36, NULL, 'Cry Me A River', 'Pop', '4:34', NULL, NULL, 0),
-(37, NULL, 'The Hills', 'RnB', '5:34', NULL, NULL, 0),
-(38, NULL, 'Stitches', 'Pop', '2:45', NULL, NULL, 0),
-(39, NULL, 'Here', 'Pop', '9:45', NULL, NULL, 0),
-(40, NULL, 'Same Old Love', 'Pop', '2:89', NULL, NULL, 0),
-(41, NULL, 'Wildest Dream', 'Pop', '3:45', NULL, NULL, 0),
-(42, NULL, 'Focus', 'bad', '4:56', NULL, NULL, 0);
+(35, NULL, 'The Cover', 'Rock', '4:56', NULL, NULL, 45),
+(36, NULL, 'Cry Me A River', 'Pop', '4:34', NULL, NULL, 46),
+(37, NULL, 'The Hills', 'RnB', '5:34', NULL, NULL, 47),
+(38, NULL, 'Stitches', 'Pop', '2:45', NULL, NULL, 21),
+(39, NULL, 'Here', 'Pop', '9:45', NULL, NULL, 52),
+(40, NULL, 'Same Old Love', 'Pop', '2:89', NULL, NULL, 45),
+(41, NULL, 'Wildest Dream', 'Pop', '3:45', NULL, NULL, 51),
+(42, NULL, 'Focus', 'bad', '4:56', NULL, NULL, 52);
 
 -- --------------------------------------------------------
 
@@ -337,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `ALID` int(5) DEFAULT NULL,
   `Type` varchar(255) NOT NULL,
   PRIMARY KEY (`userID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `user`
@@ -347,7 +363,31 @@ INSERT INTO `user` (`userID`, `Fname`, `Lname`, `email`, `password`, `TID`, `AID
 (3, 'Kyle', 'Sutherland', 'kysuther@live.ca', '$2y$10$MHkh0wAcmOrgAjrEnadxae9EFAipiHqYZwkUIAX/Wq6kFyj2HRL2S', 0, 0, NULL, 'admin'),
 (4, 'Andrew', 'Dong', 'andrew.mh.dong@gmail.com', '$2y$10$e2cpY8ex9u5/t27N1uEgCe/Q2KO4L3HNsi.Rpg4HPtpc9wW.zDbDm', 0, 0, NULL, 'admin'),
 (5, 'Joshua', 'Hong', 'joshua1hong@hotmail.com', '$2y$10$/up258qvM2WtqrEp6vuL8OvWHz0lSJJsH3FSP1OyF9J2MtuzOH9Zi', 0, 0, NULL, 'admin'),
-(6, 'Jaco', 'Cuc', 'test@test.com', '$2y$10$scNvIiu1X9k1z24U4TckmeBBj50wdkTTOVRij4EfAI1.wiYrbZ082', 0, 0, NULL, 'user');
+(6, 'Jaco', 'Cuc', 'test@test.com', '$2y$10$scNvIiu1X9k1z24U4TckmeBBj50wdkTTOVRij4EfAI1.wiYrbZ082', 0, 0, NULL, 'user'),
+(7, 'Kharlie', 'Kheung', 'kk@123.com', '$2y$10$QXVVlli9IMwkFo8WwMtnZOIopCUrapXVwrIBz/2KMg655HSYN60Nq', 0, 0, NULL, 'user'),
+(8, 'Andre', 'Donga', 'adonga@qwertop.com', '$2y$10$1BMHKxDxTLpptgGqFyma6.GvVbM7KUUFLoNieX5mRZnjU9z56O0a6', 0, 0, NULL, 'user'),
+(9, 'Jsh', 'Honaga', 'jh@tester.com', '$2y$10$vWZWID2yHNdY/iQWft4fy.Is4.uAGfj/UlxPp4ocJ3z6oacxvTOda', 0, 0, NULL, 'user'),
+(10, 'Brian', 'Brzezina', 'bbking@cpsc471.com', '$2y$10$kpm9.ErI/wi5JqRuQj4c5ewG58mIIjt4AxcjEaK4iP.66f4WkeRaW', 0, 0, NULL, 'user'),
+(11, 'Bob', 'Builder', 'bobbuilder@cpsc471.com', '$2y$10$C.BuaI9K4sczjJ84In/AlOkt/lZ6lKbzARrpU/mnxHx4YgkOaC/ze', 0, 0, NULL, 'user'),
+(12, 'Paul', 'Hui', 'ph@123.com', '$2y$10$STTChAh.zQM9jsTVkvBLK.RFAiEQQjy2davIwncrjdmBiQNB3jIfi', 0, 0, NULL, 'user'),
+(13, 'Jackie', 'Chan', 'adventures@321.com', '$2y$10$H5N7n6zHIi1TDsS.NzKgwO/lKXp476WKdO.hnu1fvcbWEyFW81kXi', 0, 0, NULL, 'user'),
+(14, 'Exo', 'Kai', 'kai@exo12.com', '$2y$10$Xj/PK1E9fpBXtgM/Dcl1/.hnKZv2zMhV12JvhopyxWyxDl8pdWz8e', 0, 0, NULL, 'user'),
+(15, 'Paul', 'Hui', 'paul@charliecheungfanclub.com', '$2y$10$veJyNER32k2y2MdWx853kenN6Z/GTW3GYiXASwV/2iw5/t/ebgOIa', 0, 0, NULL, 'user'),
+(16, 'Not', 'Charlie', 'whoop@whoopwhoop.com', '$2y$10$B1.Z9iZTk1lbh8x1DvYnJ./b8XQn7ga67MEHg0KiWEQsUpTvGrG06', 0, 0, NULL, 'user'),
+(17, 'Taylor', 'Swift', '1989@1989.com', '$2y$10$A2hrE/cVf5.VO2IyAMPOSuQXck53.xzAieZ8AnJxojRkphVzfDJIS', 0, 0, NULL, 'user'),
+(18, 'Jackson', 'Wang', 'got7@jyp.com', '$2y$10$CLybBQvgMQssDI5o8mp.Q./kAgvRYfruRWi./btoxLqIVU4KOSOka', 0, 0, NULL, 'user'),
+(19, 'Vernon', 'Chwe', 'seventeenvernon@hansol.com', '$2y$10$dMZBSHqejC9yRc3i1YIwEuaZXlWWVsZGi5pSvQjmusMwQd5Kcq/zC', 0, 0, NULL, 'user'),
+(20, 'Regina', 'George', 'queen@122.com', '$2y$10$4KVJxd1MeXLwpgYFNNddMu4YPDlgbt/CZKvP2zRMQyh7qhiqMc7H.', 0, 0, NULL, 'user'),
+(21, 'Yugi', 'Oh', 'duel@ddddduel.com', '$2y$10$KB46ZW7L7L9sm0hFdC3Cp.k0I96h.cneOhXcIKumPcBerOxb9S6aG', 0, 0, NULL, 'user'),
+(22, 'Taco', 'Bell', 'tb@taco.com', '$2y$10$EkuGhAQwZGXg42kI7B95G.Lo1fHlBRLTUOs2CTnZQhxKvn3nB1A8S', 0, 0, NULL, 'user'),
+(23, 'Franklin', 'Wong', 'wong@123.com', '$2y$10$DNNoYOo7lkvwoAqNqfCF2.nCAg2AeGRokUQMD0T7VuEd0Mt2yAQoi', 0, 0, NULL, 'user'),
+(24, 'dasfae', 'gewaga', 'qwert@asdf.com', '$2y$10$Fpd9aJ19h8VNzxj2B/AnZu/o54/rwuivvoJ4O1jZt04mfEfiKiW.6', 0, 0, NULL, 'user'),
+(25, 'tester5000', '1234', 'tester5000@200.com', '$2y$10$SzHgBZUP322PwV9WnPHPHuYoGScmAY3S2qVsgJPtdzUpmWaG/b87e', 0, 0, NULL, 'user'),
+(26, 'new', 'user', 'user123@user123.com', '$2y$10$GF/DF.kMN1E122tshIUkeOyimiYYPA/n06VkDggEXZWaRxjROKOIG', 0, 0, NULL, 'user'),
+(27, 'iwanan', 'test', 'tester12@tester12.com', '$2y$10$jFTpx50qHxqys1UmAnYfROsKIWLB5wBROfePHDHVlwSgLhME4YTei', 0, 0, NULL, 'user'),
+(28, 'Ibrahim', 'Karakira', 'Apluswork@cpsc471.com', '$2y$10$.o8i/2j3H4wWKFIjzNpsKefK5mz4r1n6RhVjUcl3Y0b29NYKBNyD2', 0, 0, NULL, 'user'),
+(29, 'Bob', 'Jones', 'bob@jones.com', '$2y$10$LK9WH0M7SzKmECTcwG9hsOMwOyPWok4cFXi1.J/3gn.elQkuNIsXe', 0, 0, NULL, 'user'),
+(30, 'bob', 'notjones', 'bob@notjones.com', '$2y$10$o63MCe4OOs5/kCI.CKYfSuw/OshEttHBdB03xbvj5uBWUJzPzzTQu', 0, 0, NULL, 'user');
 
 --
 -- Constraints for dumped tables

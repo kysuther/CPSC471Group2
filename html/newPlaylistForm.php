@@ -8,5 +8,5 @@
 
     <button type="submit" value="Create" style="width:175px;Height:25px"><b>Create</b></button>
 </form>
-    <p style='font-size:150%;font-family:Helvetica;text-align:right'><a href='playlists.php'><i>Back To Playlists</i></a></p>
+    <p style="font-size:150%;font-family:Helvetica;text-align:right"><div id="userbuttons" align="right"><a href="playlists.php"><i>Back To Playlists</i></a></div></p>
 <?php (include "footer.php")?>
