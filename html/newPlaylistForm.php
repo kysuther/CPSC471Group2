@@ -8,4 +8,5 @@
 
     <button type="submit" value="Create">Create</button>
 </form>
+<p><a href="playlists.php">Back To Playlists</a></p>
 <?php (include "footer.php")?>

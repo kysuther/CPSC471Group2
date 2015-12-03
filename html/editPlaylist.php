@@ -52,6 +52,7 @@
     <button type="submit" value="Add">Add</button>
 </form>
 <br/>
+
 <form action="deleteSong.php?link=<?php echo $_GET['link'];?>" method="post">
     <p>
     <label for="delSong">Name Of Song To Delete From Playlist:</label>
@@ -60,13 +61,11 @@
     <button type="submit" value="Delete">Delete</button>
 </form>
 <br/>
-<form action="renamePlaylist.php?link=<?php echo $_GET['link'];?>" method="post">
-    <p>
-    <label for="Rename">Change Playlist Name To:</label>
-        <input type="text" name="Rename" id="Rename">
-    </p>
-    <button type="submit" value="Rename">Rename</button>
+
+<form action="deletePlaylist.php?link=<?php echo $_GET['link'];?>" method="post">
+    <button type="submit" value="delPlaylist">Delete Playlist</button>
 </form>
+
 <br/>
 <br/>
 <br/>

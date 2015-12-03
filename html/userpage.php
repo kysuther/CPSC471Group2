@@ -98,6 +98,7 @@ text-align: center;
 <div id="userbuttons">
 <a href="/changeEmailForm.php"><b>Change Email</b></a>
 <a href="/changePassForm.php"><b>Change Password</b></a>
+<a href="/playlists.php"><b>My Playlists</b></a>
 </div>
 </div>
 </div>
