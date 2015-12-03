@@ -1,3 +1,5 @@
+<?php include("header.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,3 +17,4 @@
 </form>
 </body>
 </html>
+<?php include("footer.php") ?>
