@@ -8,7 +8,7 @@
 			FROM artists AS A, song AS S, album AS B
 			WHERE A.name = '$search_field' AND A.ArtistID = S.AID AND B.AID = A.ArtistID ";
 	//Songs that mathes the search field 
-	$sql2 = "SELECT A.name,S.songName, S.Length,S.genre
+	$sql2 = "SELECT A.name,S.songName, S.length,S.genre
 			FROM artists AS A, song AS S
 			WHERE S.songName = '$search_field' AND A.ArtistID = S.AID";
 	
